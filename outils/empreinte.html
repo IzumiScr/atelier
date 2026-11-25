@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow"><title>Changer le code</title>
+<style>
+  body{background:#000;color:#e8e8ea;font:16px/1.5 system-ui,sans-serif;margin:0;padding:24px 16px;max-width:640px}
+  input,button{font:inherit;font-size:17px;min-height:48px;border-radius:12px;width:100%;margin:6px 0}
+  input{background:#0d0d0f;color:#e8e8ea;border:1px solid #232328;padding:0 14px}
+  button{background:#e8e8ea;color:#000;border:0;font-weight:600}
+  pre{background:#0d0d0f;border:1px solid #232328;border-radius:12px;padding:14px;white-space:pre-wrap;word-break:break-all;font-size:13px}
+  p{color:#8a8a93}
+</style>
+</head>
+<body>
+<h1>Changer le code d'accès</h1>
+<p>Le calcul se fait uniquement dans ce navigateur : rien n'est envoyé. Choisissez un code long (3 ou 4 mots), puis recopiez le bloc obtenu dans <code>config.js</code>.</p>
+<input id="c" type="text" placeholder="Nouveau code" autocapitalize="none" autocomplete="off">
+<button id="b">Calculer l'empreinte</button>
+<pre id="r"></pre>
+<script>
+document.getElementById("b").onclick = async () => {
+  const code = document.getElementById("c").value.trim().toLowerCase();
+  if (code.length < 10) { document.getElementById("r").textContent = "Code trop court (10 caractères minimum)."; return; }
+  const sel = crypto.getRandomValues(new Uint8Array(16)), it = 300000;
+  const k = await crypto.subtle.importKey("raw", new TextEncoder().encode(code), "PBKDF2", false, ["deriveBits"]);
+  const bits = await crypto.subtle.deriveBits({ name: "PBKDF2", hash: "SHA-256", salt: sel, iterations: it }, k, 256);
+  const hex = (b) => [...new Uint8Array(b)].map((x) => x.toString(16).padStart(2, "0")).join("");
+  document.getElementById("r").textContent =
+    `  sel: "${hex(sel)}",\n  iterations: ${it},\n  empreinte: "${hex(bits)}",`;
+};
+</script>
+</body>
+</html>

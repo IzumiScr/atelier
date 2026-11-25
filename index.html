@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#000000">
+  <meta name="color-scheme" content="dark">
+  <title>Atelier</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icone.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Écran d'accès -->
+  <main id="porte" class="porte" hidden>
+    <form id="form-acces" class="carte" autocomplete="off">
+      <div class="logo" aria-hidden="true"></div>
+      <h1>Atelier</h1>
+      <p class="sous-titre">Accès sur invitation</p>
+      <label for="code" class="sr">Code d'accès</label>
+      <input id="code" name="code" type="password" placeholder="Code d'accès"
+             autocapitalize="none" autocorrect="off" spellcheck="false" enterkeyhint="go" required>
+      <button type="submit" id="btn-entrer">Entrer</button>
+      <p id="message" class="message" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <!-- Espace de travail (le gestionnaire de fenêtres arrive à l'étape 2) -->
+  <div id="bureau" class="bureau" hidden>
+    <header class="barre">
+      <span class="marque"><span class="logo petit" aria-hidden="true"></span>Atelier</span>
+      <span class="droite">
+        <time id="horloge"></time>
+        <button id="btn-verrou" class="icone-btn" title="Verrouiller" aria-label="Verrouiller">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5Zm-3 8V7a3 3 0 1 1 6 0v3H9Z"/></svg>
+        </button>
+      </span>
+    </header>
+    <section id="zone-fenetres" class="zone-fenetres" aria-label="Espace de travail">
+      <p class="vide">Espace prêt.<br><span>Les fenêtres arriveront à l'étape 2.</span></p>
+    </section>
+    <nav class="dock" aria-label="Lanceur">
+      <button class="lanceur" disabled title="Bientôt">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg>
+        <span>Applications</span>
+      </button>
+    </nav>
+  </div>
+
+  <noscript><p class="noscript">Activez JavaScript pour ouvrir l'Atelier.</p></noscript>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
