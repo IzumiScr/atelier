@@ -8,6 +8,10 @@ Portail personnel : une page noire où s'ouvriront plusieurs fenêtres (Atlas OS
 - L'appareil reste déverrouillé 30 jours ; le cadenas en haut à droite reverrouille.
 - Installable sur l'écran d'accueil Android (menu ⋮ › « Ajouter à l'écran d'accueil »).
 
+## Page d'accueil des projets
+Une fois la porte ouverte, l'Atelier affiche une carte par projet (Appartement, Atlas OSINT, site laser, Voyage Japon…) avec un bouton « Ouvrir le site » quand il est en ligne et « Voir sur GitHub ».
+Pour ajouter ou modifier un projet : éditer `projets.js` (un bloc par projet), directement depuis GitHub sur le téléphone.
+
 ## Limite à connaître
 Le site est **statique** : le contrôle du code se fait dans le navigateur. C'est une barrière légère (elle arrête les curieux et les moteurs de recherche), **pas** une vraie sécurité. Ne rien mettre de confidentiel dans ce dépôt : aucune clé, aucun mot de passe, aucune donnée privée. Les données restent dans OneDrive / les dépôts privés.
 

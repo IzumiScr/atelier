@@ -29,6 +29,49 @@
   }
   function fermerSession() { try { localStorage.removeItem(CLE); } catch {} }
 
+  // --- Page d'accueil : cartes des projets (liste dans projets.js) ---
+  const ETATS = { "en-ligne": "En ligne", "en-cours": "En cours", "a-venir": "À venir" };
+  const lienSur = (url) => /^https:\/\//.test(url || "") ? url : "";
+  function creerLien(url, texte, classe) {
+    const a = document.createElement("a");
+    a.href = url; a.textContent = texte; a.className = classe;
+    a.target = "_blank"; a.rel = "noopener noreferrer";
+    return a;
+  }
+  function afficherProjets() {
+    const liste = $("liste-projets");
+    if (!liste || liste.childElementCount) return;
+    for (const p of window.ATELIER_PROJETS || []) {
+      const li = document.createElement("li");
+      li.className = "projet";
+      const tete = document.createElement("div");
+      tete.className = "projet-tete";
+      const h = document.createElement("h2");
+      h.textContent = p.nom;
+      const pastille = document.createElement("span");
+      const etat = ETATS[p.etat] ? p.etat : "a-venir";
+      pastille.className = "pastille " + etat;
+      pastille.textContent = ETATS[etat];
+      tete.append(h, pastille);
+      const desc = document.createElement("p");
+      desc.className = "projet-desc";
+      desc.textContent = p.description || "";
+      li.append(tete, desc);
+      if (p.note) {
+        const note = document.createElement("p");
+        note.className = "projet-note";
+        note.textContent = p.note;
+        li.append(note);
+      }
+      const actions = document.createElement("div");
+      actions.className = "projet-actions";
+      if (lienSur(p.site)) actions.append(creerLien(p.site, "Ouvrir le site", "btn-principal"));
+      if (lienSur(p.depot)) actions.append(creerLien(p.depot, "Voir sur GitHub", "btn-second"));
+      li.append(actions);
+      liste.append(li);
+    }
+  }
+
   // --- Affichage ---
   let minuterieHorloge;
   function afficherBureau() {
@@ -36,6 +79,7 @@
     $("bureau").hidden = false;
     const tic = () => { $("horloge").textContent = new Date().toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit" }); };
     tic(); clearInterval(minuterieHorloge); minuterieHorloge = setInterval(tic, 15000);
+    afficherProjets();
     document.dispatchEvent(new CustomEvent("atelier:pret")); // point d'accroche pour l'étape 2
   }
   function afficherPorte(msg = "") {
