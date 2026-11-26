@@ -5,8 +5,8 @@ mémoire utile à l'Atelier, le proposer au propriétaire, et l'installer seulem
 
 ## Quand
 
-Une fois par mois, avec le ménage mensuel (voir `CLAUDE.md`), ou par une tâche planifiée si le
-propriétaire l'a acceptée.
+Chaque semaine pendant la phase de création (jusqu'au 26/11/2027), par la tâche planifiée « Atelier :
+entretien de la mémoire » ; ensuite, au moins une fois par mois (voir `CLAUDE.md`).
 
 ## Où regarder
 

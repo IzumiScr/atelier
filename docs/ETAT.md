@@ -28,7 +28,10 @@ Mis à jour et vérifié le 26/11/2026. Règles d'entretien : `CLAUDE.md`, parti
 - **Frontière public / privé (0.2)** : règles dans `CLAUDE.md` ; un dépôt privé séparé tient la
   correspondance « appli A = … ».
 - **Mémoire** : fichiers dans le dépôt et outils de Claude Code (règles dans `CLAUDE.md`), avec une
-  recherche hybride et une veille mensuelle des outils d'Anthropic (voir la carte ci-dessous).
+  recherche hybride et une veille des outils d'Anthropic (voir la carte ci-dessous).
+- **Entretien automatique** : tâche planifiée « Atelier : entretien de la mémoire », chaque dimanche à
+  20 h 13 (heure de Paris), pendant la phase de création, jusqu'au 26/11/2027 : ménage de la mémoire si
+  le dépôt a changé, puis veille rapide. Ensuite, passage au rythme mensuel à décider.
 - **Plan** : étape 0 (0.3 niveaux d'accès, 0.4 réglages au même endroit, 0.5 procédures de secours,
   0.6 contrôles automatiques), puis étape 1 (portail public, Sonnet), puis étape 2 (liste privée et
   vérification du code, Opus effort élevé, avec relecture de sécurité).
@@ -42,7 +45,7 @@ Reprendre la 0.3 (niveaux d'accès), puis 0.4, 0.5 et 0.6.
 
 - **0.3** : ouvrir une appli privée demande le code du portail puis un code reçu par e-mail :
   d'accord ? Le propriétaire est-il le seul utilisateur pour l'instant ?
-- **Veille automatique** : une tâche planifiée chaque mois, même sans session ouverte ?
+- **Tâche planifiée** : la faire tourner avec Sonnet pour qu'elle consomme moins ?
 - **Recommandations sans réponse** : accepter que l'historique public garde d'anciens noms ;
   procédure « code perdu » ; bulle Claude reportée.
 
