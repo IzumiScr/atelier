@@ -42,7 +42,10 @@ Ne jamais dire avoir changé le modèle de la conversation : seul le propriétai
   - ni code d'accès, ni empreinte du code ;
   - ni e-mail, clé, mot de passe ou donnée personnelle.
 - Écrire de façon neutre (« appli A », « appli B »). La correspondance avec les vrais projets est
-  tenue dans un dépôt privé séparé.
+  tenue dans un dépôt privé séparé, `atelier-prive`.
+- **Les notes qui nomment les projets du propriétaire vont dans `atelier-prive`, jamais dans ce dépôt
+  public** : noms, descriptions, adresses, liens, décisions qui les identifient. En cas de doute,
+  écrire dans `atelier-prive`.
 - Ne rien créer ni modifier sans le « validé » du propriétaire. Exception : la mémoire
   (`docs/ETAT.md`, `docs/memoire/`) se tient à jour sans « validé », selon les règles ci-dessous.
   Changer une règle de ce fichier demande toujours le « validé ».
