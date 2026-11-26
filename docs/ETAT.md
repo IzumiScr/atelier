@@ -39,7 +39,9 @@ Mis à jour et vérifié le 26/11/2026. Règles d'entretien : `CLAUDE.md`, parti
   l'accès en écriture à ce dépôt ; à recréer depuis claude.ai avec ce dépôt attaché.
 - **Plan** : étape 0 (0.4 réglages au même endroit, 0.5 procédures de secours,
   0.6 contrôles automatiques), puis étape 1 (portail public, Sonnet), puis étape 2 (liste privée et
-  vérification du code, Opus effort élevé, avec relecture de sécurité).
+  vérification du code, Opus effort élevé, avec relecture de sécurité). L'étape 2 comprend un bouton
+  « Inviter quelqu'un » : adresse + applis choisies, l'e-mail d'invitation part tout seul (le verrou
+  Cloudflare Access accepte une adresse mais n'envoie pas d'invitation lui-même).
 - **Agents permanents** : aucun pour l'instant ; ils viendront plus tard, au moment du codage.
 
 ## Prochaine action
@@ -76,7 +78,7 @@ Passer à la 0.4 (réglages au même endroit), dans une nouvelle session en Sonn
 - `docs/memoire/proprietaire.md` : habitudes du propriétaire (dictée, « validé », réponses par numéros)
   et apprentissages techniques (coût des sessions, tâche planifiée, limites). Mots-clés : propriétaire,
   habitudes, préférences, dictée, validé, coût, jetons, session, limite hebdomadaire.
-- `docs/memoire/sessions/` (temporaire, vide) : archives courtes des prochaines sessions, à condenser
+- `docs/memoire/sessions/` (temporaire) : archives courtes des prochaines sessions, à condenser
   au grand ménage suivant.
 - `docs/memoire/test-modeles.md` (temporaire) : test d'un mois de la tâche planifiée, Sonnet contre
   Opus, calendrier et résultats. Mots-clés : test, modèle, Sonnet, Opus, comparaison, tâche planifiée.
