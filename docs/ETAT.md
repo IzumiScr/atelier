@@ -4,7 +4,7 @@ Mis à jour et vérifié le 26/11/2026. Règles d'entretien : `CLAUDE.md`, parti
 
 ## Où on en est
 
-- **Étape 0 (préparation) en cours** : 0.1, 0.2 et le système de mémoire réglés, 0.3 en discussion.
+- **Étape 0 (préparation) en cours** : 0.1, 0.2, 0.3 et le système de mémoire réglés.
 - **Le portail actuel** (page noire, code d'accès vérifié dans le navigateur, cartes de projets dans
   `projets.js`) est en ligne sur GitHub Pages, publié depuis `main`.
 - **Rien n'est encore sur le domaine** : il n'est pas acheté, aucune appli n'y est publiée.
@@ -18,6 +18,10 @@ Mis à jour et vérifié le 26/11/2026. Règles d'entretien : `CLAUDE.md`, parti
   un code vérifié côté serveur. À ce moment-là (étape 2), le code d'accès est changé et l'empreinte
   retirée de `config.js`.
 - **Verrous** : chaque appli privée a son propre verrou (Cloudflare Access, code reçu par e-mail).
+- **Niveaux d'accès (0.3, décidé le 26/11/2026)** : ouvrir une appli privée demande le code du portail,
+  puis un code reçu par e-mail. Le propriétaire est le seul utilisateur pour l'instant, mais il doit
+  pouvoir ajouter des utilisateurs plus tard, par une invitation envoyée par e-mail (l'adresse invitée
+  est ajoutée au verrou de chaque appli choisie).
 - **Contrat d'une appli (0.1)** : un bloc par appli, même format dans les deux listes, fichier
   commençant par `"version": 1`.
   - Obligatoires : `id` (minuscules, sans accent, ne change jamais ; il donne le sous-domaine),
@@ -33,19 +37,17 @@ Mis à jour et vérifié le 26/11/2026. Règles d'entretien : `CLAUDE.md`, parti
   heure de Paris, jusqu'au 26/11/2027 : ménage si le dépôt a changé, puis veille rapide ; premier mois en
   test Sonnet contre Opus, voir la carte). **En pause depuis le 26/11/2026** : ses sessions n'ont pas
   l'accès en écriture à ce dépôt ; à recréer depuis claude.ai avec ce dépôt attaché.
-- **Plan** : étape 0 (0.3 niveaux d'accès, 0.4 réglages au même endroit, 0.5 procédures de secours,
+- **Plan** : étape 0 (0.4 réglages au même endroit, 0.5 procédures de secours,
   0.6 contrôles automatiques), puis étape 1 (portail public, Sonnet), puis étape 2 (liste privée et
   vérification du code, Opus effort élevé, avec relecture de sécurité).
 - **Agents permanents** : aucun pour l'instant ; ils viendront plus tard, au moment du codage.
 
 ## Prochaine action
 
-Reprendre la 0.3 (niveaux d'accès), dans une nouvelle session en Sonnet, puis 0.4, 0.5 et 0.6.
+Passer à la 0.4 (réglages au même endroit), dans une nouvelle session en Sonnet, puis 0.5 et 0.6.
 
 ## Questions ouvertes
 
-- **0.3** : ouvrir une appli privée demande le code du portail puis un code reçu par e-mail :
-  d'accord ? Le propriétaire est-il le seul utilisateur pour l'instant ?
 - **Recommandations sans réponse** : accepter que l'historique public garde d'anciens noms ;
   procédure « code perdu » ; bulle Claude reportée.
 
