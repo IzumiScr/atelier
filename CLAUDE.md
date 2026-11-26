@@ -113,6 +113,18 @@ fichier qui gonfle).
    quand il y a plus de 50 fichiers de sujet, ou quand une information existante a été ratée deux fois.
    Détail : `docs/memoire/recherche.md`.
 
+### Fin de session (ou passage en nouvelle session) : récupérer, archiver, optimiser
+
+1. **Récupérer** ce que la session a appris et qui n'est pas encore écrit : décisions, préférences du
+   propriétaire, apprentissages techniques, fils ouverts.
+2. **Archiver** : une note courte et datée, `docs/memoire/sessions/AAAA-MM-JJ-<sujet>.md`, neutre.
+   Ce qui nomme les projets va dans `atelier-prive` (tant qu'il n'existe pas : dans une note de
+   mémoire de Claude Code).
+3. **Optimiser** : fusionner ce qui est durable dans `ETAT.md` ou un fichier de sujet ; au grand ménage
+   suivant, condenser la note de session en une ligne ou la supprimer (l'historique git garde tout).
+4. **Proposer** d'ouvrir une nouvelle session en Sonnet sur le dépôt Atelier, avec son premier message
+   prêt (lire `docs/ETAT.md` et la dernière note de session).
+
 ### Quand optimiser
 
 - **Tout de suite** : dès qu'une décision est remplacée.
@@ -135,4 +147,5 @@ fichier qui gonfle).
   toujours.
 - **`memoire-etape-<n>`** : garder les 3 plus récentes, retirer les plus anciennes (les versions restent
   dans l'historique git).
-- **Pas de dossier d'archives** : ce serait de la redondance.
+- **Pas d'archive permanente** : `docs/memoire/sessions/` ne garde que les notes récentes, vidées au
+  grand ménage suivant.
