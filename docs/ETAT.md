@@ -29,12 +29,10 @@ Mis à jour et vérifié le 26/11/2026. Règles d'entretien : `CLAUDE.md`, parti
   correspondance « appli A = … ».
 - **Mémoire** : fichiers dans le dépôt et outils de Claude Code (règles dans `CLAUDE.md`), avec une
   recherche hybride et une veille des outils d'Anthropic (voir la carte ci-dessous).
-- **Entretien automatique** : tâche planifiée « Atelier : entretien de la mémoire », chaque dimanche à
-  20 h 13 (heure de Paris), pendant la phase de création, jusqu'au 26/11/2027 : ménage de la mémoire si
-  le dépôt a changé, puis veille rapide. Ensuite, passage au rythme mensuel à décider. Premier mois :
-  test alternant Sonnet et Opus (voir la carte), puis Opus jusqu'au choix du propriétaire.
-  **En pause depuis le 26/11/2026** : ses sessions n'ont pas l'accès en écriture à ce dépôt. À recréer
-  depuis la page des tâches planifiées de claude.ai, avec ce dépôt attaché.
+- **Entretien automatique** : tâche planifiée « Atelier : entretien de la mémoire » (dimanche 20 h 13,
+  heure de Paris, jusqu'au 26/11/2027 : ménage si le dépôt a changé, puis veille rapide ; premier mois en
+  test Sonnet contre Opus, voir la carte). **En pause depuis le 26/11/2026** : ses sessions n'ont pas
+  l'accès en écriture à ce dépôt ; à recréer depuis claude.ai avec ce dépôt attaché.
 - **Plan** : étape 0 (0.3 niveaux d'accès, 0.4 réglages au même endroit, 0.5 procédures de secours,
   0.6 contrôles automatiques), puis étape 1 (portail public, Sonnet), puis étape 2 (liste privée et
   vérification du code, Opus effort élevé, avec relecture de sécurité).
@@ -73,8 +71,10 @@ Reprendre la 0.3 (niveaux d'accès), dans une nouvelle session en Sonnet, puis 0
 - `docs/memoire/veille-anthropic.md` : veille mensuelle des outils de mémoire d'Anthropic, état connu,
   critères et marche à suivre avant installation. Mots-clés : Anthropic, veille, outil mémoire, API,
   Auto Dream, Dreaming, mise à jour.
-- `docs/memoire/sessions/` (temporaire) : archives courtes des sessions, à condenser au grand ménage ;
-  dernière : `2026-11-26-mise-en-place.md`. Mots-clés : session, archive, préférences, apprentissages,
-  fils ouverts, reprise.
+- `docs/memoire/proprietaire.md` : habitudes du propriétaire (dictée, « validé », réponses par numéros)
+  et apprentissages techniques (coût des sessions, tâche planifiée, limites). Mots-clés : propriétaire,
+  habitudes, préférences, dictée, validé, coût, jetons, session, limite hebdomadaire.
+- `docs/memoire/sessions/` (temporaire, vide) : archives courtes des prochaines sessions, à condenser
+  au grand ménage suivant.
 - `docs/memoire/test-modeles.md` (temporaire) : test d'un mois de la tâche planifiée, Sonnet contre
   Opus, calendrier et résultats. Mots-clés : test, modèle, Sonnet, Opus, comparaison, tâche planifiée.
