@@ -35,3 +35,8 @@ la mise en place. Issu de la note de session du 26/11/2026, condensée au grand 
   se vérifie par GitHub (déploiements, branches), pas par l'adresse.
 - La limite hebdomadaire de l'abonnement était en avertissement le 26/11/2026 (remise à zéro vers le
   02/12/2026).
+- Fable 5.2 (vérifié dans la documentation officielle le 26/11/2026) : 8 $ / 40 $ par million de jetons
+  lus / écrits, soit 2 fois Opus 5.5. Sur le forfait Pro, il n'est pas inclus : crédits payants dès le
+  premier message, prépayés, avec plafond mensuel possible (Réglages, Usage). L'effort le plus bas
+  s'appelle `low`. Ne l'utiliser que si Opus à effort élevé ne suffit pas, jamais dans une longue
+  session. Choix : `/model fable`.

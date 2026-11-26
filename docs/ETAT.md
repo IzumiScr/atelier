@@ -46,7 +46,8 @@ Mis à jour et vérifié le 26/11/2026. Règles d'entretien : `CLAUDE.md`, parti
 
 ## Prochaine action
 
-Passer à la 0.4 (réglages au même endroit), dans une nouvelle session en Sonnet, puis 0.5 et 0.6.
+Créer le dépôt privé `atelier-prive` (voir « À faire par le propriétaire »), puis la 0.4 (réglages au
+même endroit), dans une nouvelle session en Sonnet, puis 0.5 et 0.6.
 
 ## Questions ouvertes
 
