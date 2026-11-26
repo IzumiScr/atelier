@@ -4,6 +4,9 @@ Le propriétaire n'est pas développeur et écrit en français : répondre en fr
 Il travaille surtout depuis son téléphone Android, et peut-être plus tard depuis un ordinateur avec
 Claude Code : tout doit pouvoir se faire des deux façons, sans démarche réservée à l'un ou à l'autre.
 
+**Avant tout travail, lire `docs/ETAT.md`** : la mémoire à jour du projet (où on en est, décisions en
+vigueur, prochaine action, questions ouvertes).
+
 ## Choix du modèle et de l'effort (automatique)
 
 À chaque demande, estimer le modèle et l'effort nécessaires :
@@ -28,36 +31,75 @@ Ne jamais dire avoir changé le modèle de la conversation : seul le propriétai
 - Ce dépôt est **public**, historique compris : ce qui y a été publié une fois reste lisible.
   N'y mettre **aucune information privée** :
   - ni nom, description ou adresse d'un projet privé, ni lien vers un dépôt privé ;
-  - ni code d'accès, ni empreinte du code (celle de `config.js` sera retirée à l'étape 2) ;
+  - ni code d'accès, ni empreinte du code ;
   - ni e-mail, clé, mot de passe ou donnée personnelle.
 - Écrire de façon neutre (« appli A », « appli B »). La correspondance avec les vrais projets est
   tenue dans un dépôt privé séparé.
-- Ne rien créer ni modifier sans le « validé » du propriétaire.
+- Ne rien créer ni modifier sans le « validé » du propriétaire. Exception : la mémoire
+  (`docs/ETAT.md`, `docs/memoire/`) se tient à jour sans « validé », selon les règles ci-dessous.
+  Changer une règle de ce fichier demande toujours le « validé ».
 - Travailler sur une branche. Ne jamais fusionner sans son accord. Pas de pull request sauf demande.
 - Avant chaque étape : un mini-rapport de quelques lignes (ce qui va être fait, modèle, effort,
   temps estimé).
 - Le portail doit fonctionner dans tous les navigateurs (Chrome, Edge, Firefox, Safari, Samsung
   Internet), sur téléphone, tablette et ordinateur, au toucher, à la souris et au clavier.
-- Environ toutes les 10 demandes, rappeler que la liste privée permet d'ajouter vite un projet ou
-  une application, sans toucher au reste du portail.
+- Environ toutes les 10 demandes : rappeler que la liste privée permet d'ajouter vite un projet ou
+  une application, sans toucher au reste du portail, et faire le grand ménage de la mémoire.
 
-## Décisions déjà prises (étape 0 en cours, à tenir à jour)
+## Mémoire du projet : grande si besoin, toujours optimisée
 
-- **Domaine visé** : `aportatelier.fr` (un seul P), `aportatelier.com` en secours. Pas encore acheté :
-  utiliser une adresse provisoire, modifiable en un seul endroit.
-- **Adresses** : le portail à la racine du domaine, chaque appli sur son sous-domaine
-  `<id>.aportatelier.fr`.
-- **Listes** : une liste publique neutre (sur GitHub) et une liste privée (sur Cloudflare), affichée
-  seulement après un code vérifié côté serveur. Le code d'accès sera changé à ce moment-là (étape 2).
-- **Verrous** : chaque appli privée a son propre verrou (Cloudflare Access, code reçu par e-mail).
-- **Contrat d'une appli (0.1, réglé)** : un bloc par appli, même format dans les deux listes, fichier
-  commençant par `"version": 1`.
-  - Obligatoires : `id` (minuscules, sans accent, ne change jamais ; il donne le sous-domaine),
-    `nom`, `etat` (`en-ligne`, `en-cours`, `a-venir`).
-  - Facultatifs : `description`, `icone` (un emoji suffit), `ouverture` (`onglet` par défaut, ou
-    `fenetre`), `note`, `groupe` (sans effet sur l'affichage tant qu'il n'est pas utilisé),
-    `adresse` (vide en temps normal, en `https://` pour une appli hébergée ailleurs).
-- **Frontière public / privé (0.2, réglée)** : voir « Règles du dépôt » ci-dessus.
-- **Plan** : étape 0 (préparation : 0.3 niveaux d'accès, 0.4 réglages au même endroit,
-  0.5 procédures de secours, 0.6 contrôles automatiques), puis étape 1 (portail public, Sonnet),
-  puis étape 2 (liste privée et vérification du code, Opus, effort élevé, avec relecture de sécurité).
+Dans un an, la mémoire pourra être grande. Chaque information doit pourtant rester à jour, à un seul
+endroit, et n'être lue que quand elle sert.
+
+### Trois niveaux
+
+1. **`CLAUDE.md`**, lu à chaque session : les règles, qui changent rarement. 150 lignes environ au plus.
+2. **`docs/ETAT.md`**, lu avant tout travail : ce qui est vrai aujourd'hui, et la carte des fichiers
+   de sujet. 100 lignes environ au plus.
+3. **`docs/memoire/<sujet>.md`**, lu seulement quand le sujet sert : le détail d'un sujet, 150 lignes
+   environ chacun. Un fichier n'est créé que lorsqu'un sujet déborde de `ETAT.md` ; `ETAT.md` garde
+   alors une ligne de résumé et le lien.
+
+Hors du dépôt :
+
+- **les notes de mémoire de Claude Code** : seulement ce qui n'est écrit dans aucun dépôt, jamais une
+  copie de `CLAUDE.md` ou de `ETAT.md` ; mises à jour en place ;
+- **l'historique git** : toutes les anciennes versions ; jamais lu d'office, consulté seulement si besoin.
+
+La mémoire grandit en **largeur** (de nouveaux fichiers de sujet), jamais en **épaisseur** (aucun
+fichier qui gonfle).
+
+### Règles
+
+1. **Une information, un seul endroit.** Ailleurs, on renvoie vers lui.
+2. **On réécrit, on n'ajoute pas.** Pas de journal qui s'allonge : un fichier de mémoire est mis à jour
+   en place.
+3. **Remplacé = supprimé**, tout de suite. L'historique git garde l'ancienne version.
+4. **Terminé = condensé** en une ligne, ou supprimé s'il n'apporte plus rien.
+5. **Contradiction** : la décision la plus récente du propriétaire l'emporte ; en cas de doute, lui
+   demander.
+6. **Que du vérifié, daté** : chaque fichier porte « vérifié le … ». Une information non revérifiée
+   depuis 3 mois est contrôlée (dans le code, sur GitHub) au ménage suivant.
+7. **Budget dépassé** : condenser d'abord, sinon découper en fichiers de sujet.
+8. **Neutre ici** ; ce qui nomme les projets va dans le dépôt privé, avec les mêmes règles.
+
+### Quand optimiser
+
+- **Tout de suite** : dès qu'une décision est remplacée.
+- **À chaque fin d'étape** : `docs/ETAT.md` réécrit en entier, puis étiquette git `memoire-etape-<n>`.
+- **Grand ménage, environ toutes les 10 demandes** : relire les trois niveaux et les notes de mémoire ;
+  retirer doublons, obsolète et terminé ; vérifier budgets et dates.
+- **Rythme adapté** : plus souvent quand beaucoup de décisions changent ; quand le projet est calme,
+  au moins une fois par mois (à la première session du mois).
+- **Après chaque ménage** : compte rendu de trois lignes au propriétaire (retiré, fusionné, mis à
+  jour). Les suppressions évidentes (doublon, information remplacée) se font directement ; en cas de
+  doute, demander avant. Supprimer une note de mémoire de Claude Code passe toujours par sa
+  confirmation.
+
+### Sauvegardes
+
+- **`memoire-base`** : étiquette git sur la première version complète (fin de l'étape 0), gardée pour
+  toujours.
+- **`memoire-etape-<n>`** : garder les 3 plus récentes, retirer les plus anciennes (les versions restent
+  dans l'historique git).
+- **Pas de dossier d'archives** : ce serait de la redondance.
