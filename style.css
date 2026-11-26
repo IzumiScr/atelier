@@ -70,7 +70,7 @@ body {
   border: 0; border-radius: 10px; background: transparent; color: var(--doux); cursor: pointer;
 }
 .icone-btn:active, .icone-btn:hover { background: var(--surface); color: var(--texte); }
-.zone-fenetres { position: relative; flex: 1; overflow: hidden; display: grid; place-items: center; touch-action: none; }
+.zone-fenetres { position: relative; flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; }
 .vide { color: #3a3a40; text-align: center; margin: 0; user-select: none; }
 .vide span { font-size: 13px; }
 .dock { display: flex; justify-content: center; padding: 8px 16px calc(10px + var(--bas)); }
@@ -80,3 +80,29 @@ body {
 }
 .lanceur:disabled { color: var(--doux); }
 .noscript { text-align: center; padding: 40px 16px; color: var(--doux); }
+
+/* Page d'accueil des projets */
+.accueil { max-width: 960px; margin: 0 auto; padding: 20px 16px 24px; }
+.titre-accueil { margin: 0; font-size: 26px; font-weight: 600; }
+.sous-titre-accueil { margin: 4px 0 20px; color: var(--doux); font-size: 14px; }
+.projets { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+.projet {
+  display: flex; flex-direction: column; gap: 8px;
+  padding: 16px; border: 1px solid var(--bord); border-radius: var(--rayon); background: var(--surface);
+}
+.projet-tete { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+.projet h2 { margin: 0; font-size: 18px; font-weight: 600; }
+.pastille { flex: none; font-size: 12px; padding: 3px 9px; border-radius: 999px; border: 1px solid currentColor; }
+.pastille.en-ligne { color: #6fdc8c; }
+.pastille.en-cours { color: var(--accent); }
+.pastille.a-venir { color: var(--doux); }
+.projet-desc { margin: 0; font-size: 15px; color: var(--texte); }
+.projet-note { margin: 0; font-size: 13px; color: var(--doux); }
+.projet-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 6px; }
+.projet-actions a {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px;
+  border-radius: 999px; font-size: 15px; font-weight: 500; text-decoration: none;
+}
+.btn-principal { background: var(--texte); color: #000; }
+.btn-second { border: 1px solid var(--bord); color: var(--texte); }
+.btn-second:hover, .btn-second:active { background: #17171b; }

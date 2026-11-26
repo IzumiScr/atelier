@@ -27,7 +27,7 @@
     </form>
   </main>
 
-  <!-- Espace de travail (le gestionnaire de fenêtres arrive à l'étape 2) -->
+  <!-- Espace de travail : page d'accueil des projets (le gestionnaire de fenêtres arrive à l'étape 2) -->
   <div id="bureau" class="bureau" hidden>
     <header class="barre">
       <span class="marque"><span class="logo petit" aria-hidden="true"></span>Atelier</span>
@@ -38,8 +38,12 @@
         </button>
       </span>
     </header>
-    <section id="zone-fenetres" class="zone-fenetres" aria-label="Espace de travail">
-      <p class="vide">Espace prêt.<br><span>Les fenêtres arriveront à l'étape 2.</span></p>
+    <section id="zone-fenetres" class="zone-fenetres" aria-label="Mes projets">
+      <div class="accueil">
+        <h1 class="titre-accueil">Mes projets</h1>
+        <p class="sous-titre-accueil">Tous les projets en cours, en un seul endroit.</p>
+        <ul id="liste-projets" class="projets"></ul>
+      </div>
     </section>
     <nav class="dock" aria-label="Lanceur">
       <button class="lanceur" disabled title="Bientôt">
@@ -51,6 +55,7 @@
 
   <noscript><p class="noscript">Activez JavaScript pour ouvrir l'Atelier.</p></noscript>
   <script src="config.js"></script>
+  <script src="projets.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
