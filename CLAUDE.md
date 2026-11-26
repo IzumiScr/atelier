@@ -37,7 +37,7 @@ ligne « 🧠 », détails, puis le **résultat** (pas les propositions) en deux
 vulgarisé » et « Résultat en analogie », 10 mots chacune, 20 au maximum, puis les propositions.
 
 Finir chaque réponse par **1 à 10 propositions** concrètes de suite, numérotées, chacune en une ligne
-avec l'effort estimé et une question oui / non. Rien n'est appliqué sans l'accord du propriétaire.
+avec l'effort estimé et une question oui / non. Une proposition n'est faite qu'après accord.
 Une proposition refusée n'est plus reproposée : elle est notée en une ligne dans `docs/ETAT.md`.
 
 Un message qui commence par « Question » ou « Q : » est une **question à part** : y répondre
@@ -55,11 +55,23 @@ seule proposition à la fin suffit.
 - Écrire de façon neutre (« appli A », « appli B »). Les notes qui nomment les projets du propriétaire
   (noms, descriptions, adresses, liens, décisions qui les identifient) vont dans le dépôt privé
   `atelier-prive`, jamais ici ; en cas de doute, y écrire.
-- Ne rien créer ni modifier sans le « validé » du propriétaire ; changer une règle de ce fichier le
-  demande toujours. Travailler sur une branche ; ne jamais fusionner sans son accord ; pas de pull
-  request sauf demande. **Exception : la mémoire** (`docs/ETAT.md`, `docs/memoire/`) se tient à jour
-  sans « validé », directement sur `main`, après avoir vérifié qu'elle ne contient aucune information
-  privée.
+- Travailler sur une branche, sans attendre un « validé » à chaque modification, pour ce qui est
+  demandé dans la conversation ou écrit dans « Décisions en vigueur » de `docs/ETAT.md`. Une proposition
+  non acceptée et la « Prochaine action » ne sont pas des décisions. Avant chaque envoi sur GitHub,
+  même sur une branche (tout envoi est public pour toujours), vérifier qu'il n'y a aucune info privée ;
+  en cas de doute, ne pas envoyer et demander. Attendre le « validé » du propriétaire seulement pour :
+  - une **grande étape** : commencer ou terminer une étape ou sous-étape du plan (0.5, 1…) ;
+  - une **autorisation que lui seul peut donner** : fusionner dans `main` ; toucher au code d'accès, à
+    une barrière de sécurité, aux réglages GitHub (visibilité, Pages, accès, Actions) ; toucher à une
+    tâche planifiée, un connecteur ou une clé ; créer ou supprimer un dépôt ou un compte ; effacer ce
+    qui ne se récupère pas par git (données hors dépôt, réécriture d'historique, envoi forcé,
+    étiquette) ; tout paiement ou abonnement, le domaine compris ; tout message à quelqu'un ; changer
+    une règle de ce fichier ;
+  - une **personnalisation difficile à changer plus tard** (ex. : `id` d'appli, domaine, nom de dépôt,
+    format du contrat d'appli) : proposer des options et demander l'avis avant de la figer.
+  Pas de pull request sauf demande. **Exception : la mémoire** (`docs/ETAT.md`, `docs/memoire/`) se
+  tient à jour sans « validé », directement sur `main`, après avoir vérifié qu'elle ne contient aucune
+  information privée.
 - Avant chaque étape : un mini-rapport de quelques lignes (ce qui va être fait, modèle, effort,
   temps estimé).
 - Le portail doit fonctionner dans tous les navigateurs (Chrome, Edge, Firefox, Safari, Samsung
