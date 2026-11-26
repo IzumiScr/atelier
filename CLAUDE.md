@@ -18,29 +18,28 @@ vigueur, prochaine action, questions ouvertes).
 - **Opus, effort très élevé** : seulement si le niveau précédent n'a pas suffi, en le signalant.
 - **Effort maximum** : jamais sans l'accord du propriétaire.
 
-Le modèle de la conversation relit toute la conversation à chaque message : le plus économe est de
-démarrer les sessions en Sonnet et de faire appel à Opus seulement quand il le faut.
+Chaque message relit toute la conversation : le plus économe est de démarrer en Sonnet et de faire
+appel à Opus seulement quand il le faut.
 
 - **Conversation en Sonnet, tâche difficile** : la confier à un sous-agent Opus, avec l'effort estimé.
 - **Conversation en Opus, long travail simple** (beaucoup de fichiers ou de recherches) : le confier à
   un sous-agent Sonnet ou Haiku.
-- **Petite demande** : répondre directement, quel que soit le modèle : un sous-agent repart de zéro et
-  coûte plus cher.
-- **Conversation longue** (plus de 200 000 jetons de contexte) ou **fin d'étape** : mettre
-  `docs/ETAT.md` à jour, puis proposer de continuer dans une nouvelle session, en Sonnet.
+- **Petite demande** : répondre directement, quel que soit le modèle (un sous-agent repart de zéro et
+  coûte plus cher).
+- **Conversation longue** (plus de 200 000 jetons) ou **fin d'étape** : suivre « Fin de session ».
 
 Commencer chaque réponse par une ligne « 🧠 » : le niveau **conseillé** (modèle, effort, raison) et le
-modèle **réellement utilisé**, d'après les avis de la session, sans deviner.
+modèle **réellement utilisé**, d'après les avis de la session, sans deviner. Ne jamais dire avoir changé
+le modèle de la conversation : seul le propriétaire peut le faire (`/model`, `/effort`).
+
 Finir chaque réponse par **1 à 10 propositions** concrètes de suite, numérotées, chacune en une ligne
 avec l'effort estimé et une question oui / non. Rien n'est appliqué sans l'accord du propriétaire.
 Une proposition refusée n'est plus reproposée : elle est notée en une ligne dans `docs/ETAT.md`.
 
-Un message qui commence par « Question » ou « Q : » est une **question à part** : y répondre normalement, sans
-rien écrire dans la mémoire (`docs/ETAT.md`, `docs/memoire/`, notes de Claude Code) et sans le compter
-dans les 10 demandes. Si la réponse sert le projet, demander avant de l'ajouter. Une seule proposition
-à la fin suffit.
-Ne jamais dire avoir changé le modèle de la conversation : seul le propriétaire peut le faire
-(`/model`, `/effort`).
+Un message qui commence par « Question » ou « Q : » est une **question à part** : y répondre
+normalement, sans rien écrire dans la mémoire (`docs/ETAT.md`, `docs/memoire/`, notes de Claude Code) et
+sans le compter dans les 10 demandes. Si la réponse sert le projet, demander avant de l'ajouter. Une
+seule proposition à la fin suffit.
 
 ## Règles du dépôt
 
@@ -49,17 +48,14 @@ Ne jamais dire avoir changé le modèle de la conversation : seul le propriétai
   - ni nom, description ou adresse d'un projet privé, ni lien vers un dépôt privé ;
   - ni code d'accès, ni empreinte du code ;
   - ni e-mail, clé, mot de passe ou donnée personnelle.
-- Écrire de façon neutre (« appli A », « appli B »). La correspondance avec les vrais projets est
-  tenue dans un dépôt privé séparé, `atelier-prive`.
-- **Les notes qui nomment les projets du propriétaire vont dans `atelier-prive`, jamais dans ce dépôt
-  public** : noms, descriptions, adresses, liens, décisions qui les identifient. En cas de doute,
-  écrire dans `atelier-prive`.
-- Ne rien créer ni modifier sans le « validé » du propriétaire. Exception : la mémoire
-  (`docs/ETAT.md`, `docs/memoire/`) se tient à jour sans « validé », selon les règles ci-dessous.
-  Changer une règle de ce fichier demande toujours le « validé ».
-- Travailler sur une branche. Ne jamais fusionner sans son accord. Pas de pull request sauf demande.
-  Exception : la mémoire (`docs/ETAT.md`, `docs/memoire/`) se modifie directement sur `main`, jamais
-  sur une branche de travail, après avoir vérifié qu'elle ne contient aucune information privée.
+- Écrire de façon neutre (« appli A », « appli B »). Les notes qui nomment les projets du propriétaire
+  (noms, descriptions, adresses, liens, décisions qui les identifient) vont dans le dépôt privé
+  `atelier-prive`, jamais ici ; en cas de doute, y écrire.
+- Ne rien créer ni modifier sans le « validé » du propriétaire ; changer une règle de ce fichier le
+  demande toujours. Travailler sur une branche ; ne jamais fusionner sans son accord ; pas de pull
+  request sauf demande. **Exception : la mémoire** (`docs/ETAT.md`, `docs/memoire/`) se tient à jour
+  sans « validé », directement sur `main`, après avoir vérifié qu'elle ne contient aucune information
+  privée.
 - Avant chaque étape : un mini-rapport de quelques lignes (ce qui va être fait, modèle, effort,
   temps estimé).
 - Le portail doit fonctionner dans tous les navigateurs (Chrome, Edge, Firefox, Safari, Samsung
@@ -102,7 +98,6 @@ fichier qui gonfle).
 6. **Que du vérifié, daté** : chaque fichier porte « vérifié le … ». Une information non revérifiée
    depuis 3 mois est contrôlée (dans le code, sur GitHub) au ménage suivant.
 7. **Budget dépassé** : condenser d'abord, sinon découper en fichiers de sujet.
-8. **Neutre ici** ; ce qui nomme les projets va dans le dépôt privé, avec les mêmes règles.
 
 ### Retrouver une information (recherche hybride)
 
@@ -130,9 +125,8 @@ fichier qui gonfle).
 - **Tout de suite** : dès qu'une décision est remplacée.
 - **À chaque fin d'étape** : `docs/ETAT.md` réécrit en entier, puis étiquette git `memoire-etape-<n>`.
 - **Grand ménage, environ toutes les 10 demandes** : relire les trois niveaux et les notes de mémoire ;
-  retirer doublons, obsolète et terminé ; vérifier budgets et dates.
-- **Rythme adapté** : plus souvent quand beaucoup de décisions changent ; quand le projet est calme,
-  au moins une fois par mois (à la première session du mois).
+  retirer doublons, obsolète et terminé ; vérifier budgets et dates. Plus souvent quand beaucoup de
+  décisions changent ; au moins une fois par mois quand le projet est calme.
 - **Veille des outils de mémoire d'Anthropic, une fois par mois**, avec le ménage mensuel : suivre
   `docs/memoire/veille-anthropic.md`. Une nouveauté applicable est proposée au propriétaire, et
   installée seulement après son « validé ».
