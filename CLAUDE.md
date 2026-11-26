@@ -18,11 +18,19 @@ vigueur, prochaine action, questions ouvertes).
 - **Opus, effort très élevé** : seulement si le niveau précédent n'a pas suffi, en le signalant.
 - **Effort maximum** : jamais sans l'accord du propriétaire.
 
-Si la tâche demande le modèle de la conversation, la faire directement. Sinon, la confier à un
-sous-agent lancé avec ce modèle et cet effort. Pour une petite tâche, répondre directement : un
-sous-agent repart de zéro et coûte plus cher.
+Le modèle de la conversation relit toute la conversation à chaque message : le plus économe est de
+démarrer les sessions en Sonnet et de faire appel à Opus seulement quand il le faut.
 
-Commencer chaque réponse par une ligne : « 🧠 Niveau : modèle, effort, raison ».
+- **Conversation en Sonnet, tâche difficile** : la confier à un sous-agent Opus, avec l'effort estimé.
+- **Conversation en Opus, long travail simple** (beaucoup de fichiers ou de recherches) : le confier à
+  un sous-agent Sonnet ou Haiku.
+- **Petite demande** : répondre directement, quel que soit le modèle : un sous-agent repart de zéro et
+  coûte plus cher.
+- **Conversation longue** (plus de 200 000 jetons de contexte) ou **fin d'étape** : mettre
+  `docs/ETAT.md` à jour, puis proposer de continuer dans une nouvelle session, en Sonnet.
+
+Commencer chaque réponse par une ligne « 🧠 » : le niveau **conseillé** (modèle, effort, raison) et le
+modèle **réellement utilisé**, d'après les avis de la session, sans deviner.
 Finir chaque réponse par **1 à 10 propositions** concrètes de suite, numérotées, chacune en une ligne
 avec l'effort estimé et une question oui / non. Rien n'est appliqué sans l'accord du propriétaire.
 Une proposition refusée n'est plus reproposée : elle est notée en une ligne dans `docs/ETAT.md`.
