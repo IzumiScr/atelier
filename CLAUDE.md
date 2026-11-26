@@ -26,14 +26,20 @@ appel à Opus seulement quand il le faut.
   un sous-agent Sonnet ou Haiku.
 - **Petite demande** : répondre directement, quel que soit le modèle (un sous-agent repart de zéro et
   coûte plus cher).
-- **Conversation longue** (plus de 200 000 jetons) ou **fin d'étape** : suivre « Fin de session ».
+- **Conversation longue** (plus de 400 000 jetons) ou **fin d'étape** : suivre « Fin de session ».
 
 Commencer chaque réponse par une ligne « 🧠 » : le niveau **conseillé** (modèle, effort, raison) et le
 modèle **réellement utilisé**, d'après les avis de la session, sans deviner. Ne jamais dire avoir changé
 le modèle de la conversation : seul le propriétaire peut le faire (`/model`, `/effort`).
 
+Ordre de chaque réponse : le moins utile en haut, l'essentiel en bas, collé aux propositions :
+ligne « 🧠 », détails, puis le **résultat** (pas les propositions) en « Résultat en analogie »
+puis « Résultat vulgarisé ». Pour chacun : « Court » sur sa ligne, la réponse courte (10 à 20 mots) en
+dessous, une ligne vide, puis « Long » sur sa ligne, la réponse détaillée (30 à 50 mots maximum) en
+dessous, mots simples, sans terme technique. Puis les propositions.
+
 Finir chaque réponse par **1 à 10 propositions** concrètes de suite, numérotées, chacune en une ligne
-avec l'effort estimé et une question oui / non. Rien n'est appliqué sans l'accord du propriétaire.
+avec l'effort estimé et une question oui / non. Une proposition n'est faite qu'après accord.
 Une proposition refusée n'est plus reproposée : elle est notée en une ligne dans `docs/ETAT.md`.
 
 Un message qui commence par « Question » ou « Q : » est une **question à part** : y répondre
@@ -51,11 +57,23 @@ seule proposition à la fin suffit.
 - Écrire de façon neutre (« appli A », « appli B »). Les notes qui nomment les projets du propriétaire
   (noms, descriptions, adresses, liens, décisions qui les identifient) vont dans le dépôt privé
   `atelier-prive`, jamais ici ; en cas de doute, y écrire.
-- Ne rien créer ni modifier sans le « validé » du propriétaire ; changer une règle de ce fichier le
-  demande toujours. Travailler sur une branche ; ne jamais fusionner sans son accord ; pas de pull
-  request sauf demande. **Exception : la mémoire** (`docs/ETAT.md`, `docs/memoire/`) se tient à jour
-  sans « validé », directement sur `main`, après avoir vérifié qu'elle ne contient aucune information
-  privée.
+- Travailler sur une branche, sans attendre un « validé » à chaque modification, pour ce qui est
+  demandé dans la conversation ou écrit dans « Décisions en vigueur » de `docs/ETAT.md`. Une proposition
+  non acceptée et la « Prochaine action » ne sont pas des décisions. Avant chaque envoi sur GitHub,
+  même sur une branche (tout envoi est public pour toujours), vérifier qu'il n'y a aucune info privée ;
+  en cas de doute, ne pas envoyer et demander. Attendre le « validé » du propriétaire seulement pour :
+  - une **grande étape** : commencer ou terminer une étape ou sous-étape du plan (0.5, 1…) ;
+  - une **autorisation que lui seul peut donner** : fusionner dans `main` ; toucher au code d'accès, à
+    une barrière de sécurité, aux réglages GitHub (visibilité, Pages, accès, Actions) ; toucher à une
+    tâche planifiée, un connecteur ou une clé ; créer ou supprimer un dépôt ou un compte ; effacer ce
+    qui ne se récupère pas par git (données hors dépôt, réécriture d'historique, envoi forcé,
+    étiquette) ; tout paiement ou abonnement, le domaine compris ; tout message à quelqu'un ; changer
+    une règle de ce fichier ;
+  - une **personnalisation difficile à changer plus tard** (ex. : `id` d'appli, domaine, nom de dépôt,
+    format du contrat d'appli) : proposer des options et demander l'avis avant de la figer.
+  Pas de pull request sauf demande. **Exception : la mémoire** (`docs/ETAT.md`, `docs/memoire/`) se
+  tient à jour sans « validé », directement sur `main`, après avoir vérifié qu'elle ne contient aucune
+  information privée.
 - Avant chaque étape : un mini-rapport de quelques lignes (ce qui va être fait, modèle, effort,
   temps estimé).
 - Le portail doit fonctionner dans tous les navigateurs (Chrome, Edge, Firefox, Safari, Samsung
@@ -70,7 +88,7 @@ endroit, et n'être lue que quand elle sert.
 
 ### Trois niveaux
 
-1. **`CLAUDE.md`**, lu à chaque session : les règles, qui changent rarement. 150 lignes environ au plus.
+1. **`CLAUDE.md`**, lu à chaque session : les règles, qui changent rarement. 200 lignes au plus.
 2. **`docs/ETAT.md`**, lu avant tout travail : ce qui est vrai aujourd'hui, et la carte des fichiers
    de sujet. 100 lignes environ au plus.
 3. **`docs/memoire/<sujet>.md`**, lu seulement quand le sujet sert : le détail d'un sujet, 150 lignes
@@ -83,8 +101,8 @@ Hors du dépôt :
   copie de `CLAUDE.md` ou de `ETAT.md` ; mises à jour en place ;
 - **l'historique git** : toutes les anciennes versions ; jamais lu d'office, consulté seulement si besoin.
 
-La mémoire grandit en **largeur** (de nouveaux fichiers de sujet), jamais en **épaisseur** (aucun
-fichier qui gonfle).
+La mémoire grandit en **largeur** (de nouveaux fichiers de sujet) ; en **épaisseur** (un fichier qui
+gonfle) seulement par la règle 7.
 
 ### Règles
 
@@ -97,7 +115,11 @@ fichier qui gonfle).
    demander.
 6. **Que du vérifié, daté** : chaque fichier porte « vérifié le … ». Une information non revérifiée
    depuis 3 mois est contrôlée (dans le code, sur GitHub) au ménage suivant.
-7. **Budget dépassé** : condenser d'abord, sinon découper en fichiers de sujet.
+7. **Budgets revus** (les trois niveaux, fichiers futurs compris) : à chaque grand ménage, et dès qu'un
+   fichier atteint 90 % du sien. Condenser d'abord ; si tout ce qui reste sert, proposer, chiffres à
+   l'appui (lignes, coût de lecture), de découper ou d'augmenter le budget ; rien ne change sans
+   « validé ». `CLAUDE.md` ne dépasse jamais 200 lignes (au-delà, selon Anthropic, les consignes sont
+   moins bien suivies). Une ligne : 110 caractères au plus.
 
 ### Retrouver une information (recherche hybride)
 
@@ -125,8 +147,8 @@ fichier qui gonfle).
 - **Tout de suite** : dès qu'une décision est remplacée.
 - **À chaque fin d'étape** : `docs/ETAT.md` réécrit en entier, puis étiquette git `memoire-etape-<n>`.
 - **Grand ménage, environ toutes les 10 demandes** : relire les trois niveaux et les notes de mémoire ;
-  retirer doublons, obsolète et terminé ; vérifier budgets et dates. Plus souvent quand beaucoup de
-  décisions changent ; au moins une fois par mois quand le projet est calme.
+  retirer doublons, obsolète et terminé ; revoir les budgets (règle 7) et les dates. Plus souvent quand
+  beaucoup de décisions changent ; au moins une fois par mois quand le projet est calme.
 - **Veille des outils de mémoire d'Anthropic, une fois par mois**, avec le ménage mensuel : suivre
   `docs/memoire/veille-anthropic.md`. Une nouveauté applicable est proposée au propriétaire, et
   installée seulement après son « validé ».
