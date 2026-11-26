@@ -48,6 +48,8 @@ Reprendre la 0.3 (niveaux d'accès), dans une nouvelle session en Sonnet, puis 0
 
 - **0.3** : ouvrir une appli privée demande le code du portail puis un code reçu par e-mail :
   d'accord ? Le propriétaire est-il le seul utilisateur pour l'instant ?
+- **Règle « fin de session »** (récupérer, archiver, optimiser) : écrite sur la branche, en attente de
+  « valide et fusionne ».
 - **Recommandations sans réponse** : accepter que l'historique public garde d'anciens noms ;
   procédure « code perdu » ; bulle Claude reportée.
 
@@ -73,5 +75,8 @@ Reprendre la 0.3 (niveaux d'accès), dans une nouvelle session en Sonnet, puis 0
 - `docs/memoire/veille-anthropic.md` : veille mensuelle des outils de mémoire d'Anthropic, état connu,
   critères et marche à suivre avant installation. Mots-clés : Anthropic, veille, outil mémoire, API,
   Auto Dream, Dreaming, mise à jour.
+- `docs/memoire/sessions/` (temporaire) : archives courtes des sessions, à condenser au grand ménage ;
+  dernière : `2026-11-26-mise-en-place.md`. Mots-clés : session, archive, préférences, apprentissages,
+  fils ouverts, reprise.
 - `docs/memoire/test-modeles.md` (temporaire) : test d'un mois de la tâche planifiée, Sonnet contre
   Opus, calendrier et résultats. Mots-clés : test, modèle, Sonnet, Opus, comparaison, tâche planifiée.
