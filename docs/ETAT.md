@@ -48,8 +48,6 @@ Reprendre la 0.3 (niveaux d'accès), dans une nouvelle session en Sonnet, puis 0
 
 - **0.3** : ouvrir une appli privée demande le code du portail puis un code reçu par e-mail :
   d'accord ? Le propriétaire est-il le seul utilisateur pour l'instant ?
-- **Règle « fin de session »** (récupérer, archiver, optimiser) : écrite sur la branche, en attente de
-  « valide et fusionne ».
 - **Recommandations sans réponse** : accepter que l'historique public garde d'anciens noms ;
   procédure « code perdu » ; bulle Claude reportée.
 

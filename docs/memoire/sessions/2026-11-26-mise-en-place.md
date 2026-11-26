@@ -35,8 +35,7 @@ durables sont déjà dans `docs/ETAT.md` et les règles dans `CLAUDE.md`. L'hist
   utilisateur ?).
 - Dépôt privé `atelier-prive` : à créer par le propriétaire, puis à ajouter à la session.
 - Tâche planifiée : en pause ; à recréer avec le dépôt attaché.
-- Règle « fin de session » (récupérer, archiver, optimiser) : écrite sur la branche, en attente de
-  « valide et fusionne ».
+- Règle « fin de session » (récupérer, archiver, optimiser) : fusionnée dans `main` le 26/11/2026.
 - Domaine `aportatelier.fr` : pas acheté ; compte Cloudflare : pas créé.
 - Les informations qui nomment les autres projets du propriétaire sont dans une note de mémoire de
   Claude Code, en attendant `atelier-prive`.
