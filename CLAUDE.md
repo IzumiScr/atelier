@@ -27,7 +27,7 @@ Finir chaque réponse par **1 à 10 propositions** concrètes de suite, numérot
 avec l'effort estimé et une question oui / non. Rien n'est appliqué sans l'accord du propriétaire.
 Une proposition refusée n'est plus reproposée : elle est notée en une ligne dans `docs/ETAT.md`.
 
-Un message qui commence par « Question » est une **question à part** : y répondre normalement, sans
+Un message qui commence par « Question » ou « Q : » est une **question à part** : y répondre normalement, sans
 rien écrire dans la mémoire (`docs/ETAT.md`, `docs/memoire/`, notes de Claude Code) et sans le compter
 dans les 10 demandes. Si la réponse sert le projet, demander avant de l'ajouter. Une seule proposition
 à la fin suffit.
