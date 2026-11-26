@@ -15,6 +15,9 @@ la mise en place. Issu de la note de session du 26/11/2026, condensée au grand 
   se mette à jour directement dans `main`.
 - Il veut des étapes pas à pas, depuis le téléphone, pour ce qu'il doit faire lui-même (dépôt, compte,
   achat).
+- Une session = un projet : une session Atelier n'a que le dépôt `atelier` (plus `atelier-prive` quand
+  il existera), jamais les dépôts privés des autres projets. Raisons : coût (chaque `CLAUDE.md` est relu à
+  chaque message), consignes qui se contredisent, risque de fuite privé vers public, écriture par erreur.
 
 ## Apprentissages techniques
 
