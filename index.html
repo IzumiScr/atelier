@@ -17,7 +17,7 @@
   <main id="porte" class="porte" hidden>
     <form id="form-acces" class="carte" autocomplete="off">
       <div class="logo" aria-hidden="true"></div>
-      <h1>Atelier</h1>
+      <h1 data-nom>Atelier</h1>
       <p class="sous-titre">Accès sur invitation</p>
       <label for="code" class="sr">Code d'accès</label>
       <input id="code" name="code" type="password" placeholder="Code d'accès"
@@ -30,7 +30,7 @@
   <!-- Espace de travail : page d'accueil des projets (le gestionnaire de fenêtres arrive à l'étape 2) -->
   <div id="bureau" class="bureau" hidden>
     <header class="barre">
-      <span class="marque"><span class="logo petit" aria-hidden="true"></span>Atelier</span>
+      <span class="marque"><span class="logo petit" aria-hidden="true"></span><span data-nom>Atelier</span></span>
       <span class="droite">
         <time id="horloge"></time>
         <button id="btn-verrou" class="icone-btn" title="Verrouiller" aria-label="Verrouiller">

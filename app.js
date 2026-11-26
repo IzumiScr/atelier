@@ -4,6 +4,16 @@
   const CLE = "atelier.session";
   const $ = (id) => document.getElementById(id);
 
+  // --- Réglages d'affichage (config.js) ---
+  if (CFG.nom) {
+    document.title = CFG.nom;
+    document.querySelectorAll("[data-nom]").forEach((el) => { el.textContent = CFG.nom; });
+  }
+  if (CFG.couleurBarre) {
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", CFG.couleurBarre);
+  }
+
   // --- Empreinte PBKDF2 (Web Crypto) ---
   const hexVersOctets = (h) => new Uint8Array(h.match(/../g).map((x) => parseInt(x, 16)));
   const octetsVersHex = (b) => [...new Uint8Array(b)].map((x) => x.toString(16).padStart(2, "0")).join("");
@@ -117,7 +127,7 @@
       carte.classList.remove("secoue"); void carte.offsetWidth; carte.classList.add("secoue");
       $("message").textContent = "Code incorrect.";
       $("code").select();
-      await new Promise((r) => setTimeout(r, Math.min(400 * echecs, 4000))); // ralentit les essais en série
+      await new Promise((r) => setTimeout(r, Math.min(CFG.ralentissementMs * echecs, CFG.ralentissementMaxMs))); // ralentit les essais en série
     }
     btn.disabled = false;
   });
