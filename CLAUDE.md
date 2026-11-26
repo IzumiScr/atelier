@@ -39,6 +39,8 @@ Ne jamais dire avoir changé le modèle de la conversation : seul le propriétai
   (`docs/ETAT.md`, `docs/memoire/`) se tient à jour sans « validé », selon les règles ci-dessous.
   Changer une règle de ce fichier demande toujours le « validé ».
 - Travailler sur une branche. Ne jamais fusionner sans son accord. Pas de pull request sauf demande.
+  Exception : la mémoire (`docs/ETAT.md`, `docs/memoire/`) se modifie directement sur `main`, jamais
+  sur une branche de travail, après avoir vérifié qu'elle ne contient aucune information privée.
 - Avant chaque étape : un mini-rapport de quelques lignes (ce qui va être fait, modèle, effort,
   temps estimé).
 - Le portail doit fonctionner dans tous les navigateurs (Chrome, Edge, Firefox, Safari, Samsung

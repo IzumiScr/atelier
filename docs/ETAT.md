@@ -34,16 +34,13 @@ Mis à jour et vérifié le 26/11/2026. Règles d'entretien : `CLAUDE.md`, parti
 
 ## Prochaine action
 
-Terminer la 0.3 (niveaux d'accès), puis 0.4, 0.5 et 0.6.
+Choisir sur quel outil ou quelle méthode existante s'appuyer pour la mémoire (comparaison en cours),
+puis terminer la 0.3 (niveaux d'accès), puis 0.4, 0.5 et 0.6.
 
 ## Questions ouvertes
 
 - **0.3** : ouvrir une appli privée demande le code du portail puis un code reçu par e-mail :
   d'accord ? Le propriétaire est-il le seul utilisateur pour l'instant ?
-- **Mémoire** : base posée à la fin de l'étape 0 ? Mises à jour de la mémoire directement dans
-  `main`, sans demander à chaque fois ?
-- **Note de mémoire de Claude Code** en doublon avec `CLAUDE.md` (appareils et navigateurs) : à
-  supprimer ?
 - **Recommandations sans réponse** : accepter que l'historique public garde d'anciens noms ;
   procédure « code perdu » ; bulle Claude reportée.
 
