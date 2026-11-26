@@ -8,8 +8,10 @@ la mise en place. Issu de la note de session du 26/11/2026, condensée au grand 
 - Il écrit souvent par dictée vocale : les mots peuvent être déformés (nom de domaine, par exemple).
   Confirmer l'orthographe lettre par lettre avant d'agir.
 - Il répond par numéros ou par « oui / non » aux propositions.
-- « Validé » autorise la création ; « valide et fusionne » autorise aussi la fusion dans `main`. Un
-  « valider » seul n'autorise pas la fusion.
+- Quand les validations à chaque modification l'ont fatigué (26/11/2026), il a demandé de n'en garder
+  que pour les grandes étapes et les autorisations : règle dans `CLAUDE.md`. Un « oui » par numéro
+  autorise exactement ce que la proposition décrit, fusion comprise si elle la nomme.
+- Il veut l'essentiel en bas de chaque réponse, collé aux propositions (format dans `CLAUDE.md`).
 - Il préfère la qualité et l'économie à la vitesse : une étape lente et bien posée lui convient.
 - Il veut une mémoire à un seul endroit, à jour, sans historique qui s'accumule ; il a accepté qu'elle
   se mette à jour directement dans `main`.
@@ -20,6 +22,9 @@ la mise en place. Issu de la note de session du 26/11/2026, condensée au grand 
   chaque message), consignes qui se contredisent, risque de fuite privé vers public, écriture par erreur.
 
 ## Apprentissages techniques
+
+- Après une fusion dans `main`, revenir tout de suite sur la branche de travail, puis vérifier la branche
+  active avant chaque commit (sinon un changement de règle peut être commité sur `main` par erreur).
 
 - Le modèle d'une conversation ne se change que par `/model` et `/effort`, tapés par le propriétaire.
   Seuls les sous-agents peuvent avoir un autre modèle (champs `model` et `effort`). Une commande ou une
