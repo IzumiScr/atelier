@@ -26,7 +26,8 @@ appel à Opus seulement quand il le faut.
   un sous-agent Sonnet ou Haiku.
 - **Petite demande** : répondre directement, quel que soit le modèle (un sous-agent repart de zéro et
   coûte plus cher).
-- **Conversation longue** (plus de 400 000 jetons) ou **fin d'étape** : suivre « Fin de session ».
+- **Conversation longue** (le seuil du compactage automatique, réglage « auto » affiché par `/autocompact` :
+  1 million de jetons pour Sonnet 5.5, à revérifier si le modèle change) ou **fin d'étape** : suivre « Fin de session ».
 
 Commencer chaque réponse par une ligne « 🧠 » : le niveau **conseillé** (modèle, effort, raison) et le
 modèle **réellement utilisé**, d'après les avis de la session, sans deviner. Ne jamais dire avoir changé
