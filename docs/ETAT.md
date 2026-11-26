@@ -4,7 +4,7 @@ Mis à jour et vérifié le 26/11/2026. Règles d'entretien : `CLAUDE.md`, parti
 
 ## Où on en est
 
-- **Étape 0 (préparation) en cours** : 0.1, 0.2, 0.3 et le système de mémoire réglés. Dépôt privé
+- **Étape 0 (préparation) en cours** : 0.1, 0.2, 0.3, 0.4 et le système de mémoire réglés. Dépôt privé
   `atelier-prive` créé (vide, privé) le 26/11/2026.
 - **Le portail actuel** (page noire, code d'accès vérifié dans le navigateur, cartes de projets dans
   `projets.js`) est en ligne sur GitHub Pages, publié depuis `main`.
@@ -38,8 +38,9 @@ Mis à jour et vérifié le 26/11/2026. Règles d'entretien : `CLAUDE.md`, parti
   heure de Paris, jusqu'au 26/11/2027 : ménage si le dépôt a changé, puis veille rapide ; premier mois en
   test Sonnet contre Opus, voir la carte). **En pause depuis le 26/11/2026** : ses sessions n'ont pas
   l'accès en écriture à ce dépôt ; à recréer depuis claude.ai avec ce dépôt attaché.
-- **Plan** : étape 0 (0.4 réglages au même endroit, 0.5 procédures de secours,
-  0.6 contrôles automatiques), puis étape 1 (portail public, Sonnet), puis étape 2 (liste privée et
+- **Réglages (0.4, faite le 26/11/2026)** : tous dans `config.js`, liste expliquée en tête du fichier ;
+  `manifest.webmanifest` et `style.css` restent à part.
+- **Plan** : étape 0 (0.5 procédures de secours, 0.6 contrôles automatiques), puis étape 1 (portail public, Sonnet), puis étape 2 (liste privée et
   vérification du code, Opus effort élevé, avec relecture de sécurité). L'étape 2 comprend un bouton
   « Inviter quelqu'un » : adresse + applis choisies, l'e-mail d'invitation part tout seul (le verrou
   Cloudflare Access accepte une adresse mais n'envoie pas d'invitation lui-même).
@@ -47,7 +48,7 @@ Mis à jour et vérifié le 26/11/2026. Règles d'entretien : `CLAUDE.md`, parti
 
 ## Prochaine action
 
-La 0.4 (réglages au même endroit), dans une nouvelle session en Sonnet, puis 0.5 et 0.6.
+La 0.5 (procédures de secours), dans une nouvelle session en Sonnet, puis la 0.6.
 
 ## Questions ouvertes
 
