@@ -18,11 +18,21 @@ vigueur, prochaine action, questions ouvertes).
 - **Opus, effort très élevé** : seulement si le niveau précédent n'a pas suffi, en le signalant.
 - **Effort maximum** : jamais sans l'accord du propriétaire.
 
-Chaque message relit toute la conversation : le plus économe est de démarrer en Sonnet et de faire
-appel à Opus seulement quand il le faut.
+Chaque message relit toute la conversation : démarrer bas et monter d'un cran seulement quand il le faut.
+Le propriétaire travaille en Haiku, effort très élevé (`xhigh`).
 
+- **Conversation en Haiku : l'échelle Haiku → Sonnet → Opus**, l'effort choisi avec la liste ci-dessus :
+  1. Haiku répond seul aux petites demandes (question courte, recherche simple, reformulation).
+  2. Au-delà, ou en cas de doute, Sonnet refait la réflexion. Pour un simple avis : le conseiller
+     (`/advisor sonnet`), s'il est actif, en écrivant d'abord la question ; son effort ne se choisit pas.
+     Pour la tâche entière : un sous-agent Sonnet, avec un résumé complet de la demande et l'effort
+     estimé par Haiku.
+  3. Sonnet finit par un verdict : « suffisant », ou « Opus nécessaire, effort …, parce que … ». Si
+     Opus est nécessaire, ou pour sécurité, accès, données privées, architecture : un sous-agent Opus,
+     à l'effort dit par Sonnet (élevé par défaut ; très élevé seulement s'il l'estime nécessaire, en le
+     signalant ; maximum jamais sans l'accord du propriétaire).
+  La ligne « 🧠 » dit quel échelon a répondu, et avec quel effort.
 - **Conversation en Sonnet, tâche difficile** : la confier à un sous-agent Opus, avec l'effort estimé.
-- **Conversation en Haiku, tâche difficile** : la confier à un sous-agent Sonnet ou Opus, avec l'effort estimé.
 - **Conversation en Opus, long travail simple** (beaucoup de fichiers ou de recherches) : le confier à
   un sous-agent Sonnet ou Haiku.
 - **Petite demande** : répondre directement, quel que soit le modèle (un sous-agent repart de zéro et
