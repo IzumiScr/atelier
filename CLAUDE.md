@@ -85,6 +85,15 @@ fichier qui gonfle).
 7. **Budget dépassé** : condenser d'abord, sinon découper en fichiers de sujet.
 8. **Neutre ici** ; ce qui nomme les projets va dans le dépôt privé, avec les mêmes règles.
 
+### Retrouver une information (recherche hybride)
+
+1. **Par le sens, avec la carte** : `docs/ETAT.md` décrit chaque fichier de sujet en une ligne, avec des
+   mots-clés. Lire la carte, puis n'ouvrir que les fichiers utiles.
+2. **Par les mots exacts** : chercher dans les fichiers (nom, date, terme précis).
+3. **Plus tard, un moteur de recherche par le sens** : à proposer quand la carte dépasse 100 lignes,
+   quand il y a plus de 50 fichiers de sujet, ou quand une information existante a été ratée deux fois.
+   Détail : `docs/memoire/recherche.md`.
+
 ### Quand optimiser
 
 - **Tout de suite** : dès qu'une décision est remplacée.
@@ -93,6 +102,9 @@ fichier qui gonfle).
   retirer doublons, obsolète et terminé ; vérifier budgets et dates.
 - **Rythme adapté** : plus souvent quand beaucoup de décisions changent ; quand le projet est calme,
   au moins une fois par mois (à la première session du mois).
+- **Veille des outils de mémoire d'Anthropic, une fois par mois**, avec le ménage mensuel : suivre
+  `docs/memoire/veille-anthropic.md`. Une nouveauté applicable est proposée au propriétaire, et
+  installée seulement après son « validé ».
 - **Après chaque ménage** : compte rendu de trois lignes au propriétaire (retiré, fusionné, mis à
   jour). Les suppressions évidentes (doublon, information remplacée) se font directement ; en cas de
   doute, demander avant. Supprimer une note de mémoire de Claude Code passe toujours par sa
