@@ -22,6 +22,7 @@ Chaque message relit toute la conversation : le plus économe est de démarrer e
 appel à Opus seulement quand il le faut.
 
 - **Conversation en Sonnet, tâche difficile** : la confier à un sous-agent Opus, avec l'effort estimé.
+- **Conversation en Haiku, tâche difficile** : la confier à un sous-agent Sonnet ou Opus, avec l'effort estimé.
 - **Conversation en Opus, long travail simple** (beaucoup de fichiers ou de recherches) : le confier à
   un sous-agent Sonnet ou Haiku.
 - **Petite demande** : répondre directement, quel que soit le modèle (un sous-agent repart de zéro et
