@@ -33,6 +33,8 @@ Mis à jour et vérifié le 26/11/2026. Règles d'entretien : `CLAUDE.md`, parti
   20 h 13 (heure de Paris), pendant la phase de création, jusqu'au 26/11/2027 : ménage de la mémoire si
   le dépôt a changé, puis veille rapide. Ensuite, passage au rythme mensuel à décider. Premier mois :
   test alternant Sonnet et Opus (voir la carte), puis Opus jusqu'au choix du propriétaire.
+  **En pause depuis le 26/11/2026** : ses sessions n'ont pas l'accès en écriture à ce dépôt. À recréer
+  depuis la page des tâches planifiées de claude.ai, avec ce dépôt attaché.
 - **Plan** : étape 0 (0.3 niveaux d'accès, 0.4 réglages au même endroit, 0.5 procédures de secours,
   0.6 contrôles automatiques), puis étape 1 (portail public, Sonnet), puis étape 2 (liste privée et
   vérification du code, Opus effort élevé, avec relecture de sécurité).
@@ -40,7 +42,7 @@ Mis à jour et vérifié le 26/11/2026. Règles d'entretien : `CLAUDE.md`, parti
 
 ## Prochaine action
 
-Reprendre la 0.3 (niveaux d'accès), puis 0.4, 0.5 et 0.6.
+Reprendre la 0.3 (niveaux d'accès), dans une nouvelle session en Sonnet, puis 0.4, 0.5 et 0.6.
 
 ## Questions ouvertes
 
@@ -54,6 +56,8 @@ Reprendre la 0.3 (niveaux d'accès), puis 0.4, 0.5 et 0.6.
 - Créer le dépôt privé (nom proposé : `atelier-prive`).
 - Créer un compte Cloudflare gratuit (utile pour l'étape 2).
 - Acheter le domaine, le moment venu.
+- Recréer la tâche planifiée avec ce dépôt attaché. Accepté, à faire plus tard : Claude lira d'abord la
+  documentation officielle pour donner les étapes exactes.
 
 ## À traiter plus tard
 

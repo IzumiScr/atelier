@@ -2,6 +2,8 @@
 
 Vérifié le 26/11/2026. Résumé : pendant le premier mois, la tâche « Atelier : entretien de la mémoire »
 alterne Sonnet et Opus pour comparer. Ce fichier est supprimé une fois le choix fait.
+**En pause depuis le 26/11/2026** (la tâche ne peut pas écrire dans le dépôt) : le calendrier sera
+décalé à la reprise.
 
 ## Calendrier
 
@@ -20,4 +22,6 @@ sous-agent Opus, effort élevé.
 
 Format : date, modèle, ce qui a été fait, ce qui a été trouvé, remarque sur la qualité.
 
-- Aucun passage pour l'instant.
+- 26/11/2026, Sonnet (test, deux essais) : la tâche a démarré, lu la mémoire et suivi ses consignes,
+  mais n'a rien pu enregistrer (pas d'accès en écriture au dépôt). Coût : 0,11 à 0,19 $ par essai, au
+  tarif de l'API.

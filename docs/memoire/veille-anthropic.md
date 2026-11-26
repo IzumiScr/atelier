@@ -6,7 +6,8 @@ mémoire utile à l'Atelier, le proposer au propriétaire, et l'installer seulem
 ## Quand
 
 Chaque semaine pendant la phase de création (jusqu'au 26/11/2027), par la tâche planifiée « Atelier :
-entretien de la mémoire » ; ensuite, au moins une fois par mois (voir `CLAUDE.md`).
+entretien de la mémoire », en pause depuis le 26/11/2026. En attendant, et après cette phase : au moins
+une fois par mois, pendant les sessions (voir `CLAUDE.md`).
 
 ## Où regarder
 
