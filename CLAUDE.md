@@ -33,8 +33,8 @@ modèle **réellement utilisé**, d'après les avis de la session, sans deviner.
 le modèle de la conversation : seul le propriétaire peut le faire (`/model`, `/effort`).
 
 Ordre de chaque réponse : le moins utile en haut, l'essentiel en bas, collé aux propositions :
-ligne « 🧠 », détails, puis le **résultat** (pas les propositions) en « Résultat vulgarisé » et
-« Résultat en analogie ». Pour chacun : « Court » sur sa ligne, la réponse courte (10 à 20 mots) en
+ligne « 🧠 », détails, puis le **résultat** (pas les propositions) en « Résultat en analogie »
+puis « Résultat vulgarisé ». Pour chacun : « Court » sur sa ligne, la réponse courte (10 à 20 mots) en
 dessous, une ligne vide, puis « Long » sur sa ligne, la réponse détaillée (30 à 50 mots maximum) en
 dessous, mots simples, sans terme technique. Puis les propositions.
 
