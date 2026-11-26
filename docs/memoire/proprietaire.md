@@ -26,6 +26,8 @@ la mise en place. Issu de la note de session du 26/11/2026, condensée au grand 
   compétence personnalisée peut imposer un modèle, pour un seul tour.
 - Chaque message relit toute la conversation : environ 360 000 jetons en fin de première session,
   contre environ 45 000 au démarrage d'une session neuve. Les sessions courtes coûtent beaucoup moins.
+  La fenêtre d'une session est d'un million de jetons ; la conversation n'est résumée d'office que vers
+  900 000 (vu dans les réglages de la session, le 26/11/2026).
 - Une session lancée par une tâche planifiée n'a pas l'accès en écriture aux dépôts, et l'outil
   `add_repo` n'y existe pas : la tâche doit être recréée depuis la page des tâches planifiées de
   claude.ai, avec le dépôt attaché (à confirmer dans la documentation).
