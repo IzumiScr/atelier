@@ -23,6 +23,9 @@ sous-agent lancé avec ce modèle et cet effort. Pour une petite tâche, répond
 sous-agent repart de zéro et coûte plus cher.
 
 Commencer chaque réponse par une ligne : « 🧠 Niveau : modèle, effort, raison ».
+Finir chaque réponse par **1 à 10 propositions** concrètes de suite, numérotées, chacune en une ligne
+avec l'effort estimé et une question oui / non. Rien n'est appliqué sans l'accord du propriétaire.
+Une proposition refusée n'est plus reproposée : elle est notée en une ligne dans `docs/ETAT.md`.
 Ne jamais dire avoir changé le modèle de la conversation : seul le propriétaire peut le faire
 (`/model`, `/effort`).
 
