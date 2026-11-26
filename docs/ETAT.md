@@ -4,7 +4,8 @@ Mis à jour et vérifié le 26/11/2026. Règles d'entretien : `CLAUDE.md`, parti
 
 ## Où on en est
 
-- **Étape 0 (préparation) en cours** : 0.1, 0.2, 0.3 et le système de mémoire réglés.
+- **Étape 0 (préparation) en cours** : 0.1, 0.2, 0.3 et le système de mémoire réglés. Dépôt privé
+  `atelier-prive` créé (vide, privé) le 26/11/2026.
 - **Le portail actuel** (page noire, code d'accès vérifié dans le navigateur, cartes de projets dans
   `projets.js`) est en ligne sur GitHub Pages, publié depuis `main`.
 - **Rien n'est encore sur le domaine** : il n'est pas acheté, aucune appli n'y est publiée.
@@ -46,8 +47,7 @@ Mis à jour et vérifié le 26/11/2026. Règles d'entretien : `CLAUDE.md`, parti
 
 ## Prochaine action
 
-Créer le dépôt privé `atelier-prive` (voir « À faire par le propriétaire »), puis la 0.4 (réglages au
-même endroit), dans une nouvelle session en Sonnet, puis 0.5 et 0.6.
+La 0.4 (réglages au même endroit), dans une nouvelle session en Sonnet, puis 0.5 et 0.6.
 
 ## Questions ouvertes
 
@@ -56,7 +56,6 @@ même endroit), dans une nouvelle session en Sonnet, puis 0.5 et 0.6.
 
 ## À faire par le propriétaire
 
-- Créer le dépôt privé (nom proposé : `atelier-prive`).
 - Créer un compte Cloudflare gratuit (utile pour l'étape 2).
 - Acheter le domaine, le moment venu.
 - Recréer la tâche planifiée avec ce dépôt attaché. Accepté, à faire plus tard : Claude lira d'abord la

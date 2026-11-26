@@ -32,6 +32,10 @@ Commencer chaque réponse par une ligne « 🧠 » : le niveau **conseillé** (m
 modèle **réellement utilisé**, d'après les avis de la session, sans deviner. Ne jamais dire avoir changé
 le modèle de la conversation : seul le propriétaire peut le faire (`/model`, `/effort`).
 
+Ordre de chaque réponse : le moins utile en haut, l'essentiel en bas, collé aux propositions :
+ligne « 🧠 », détails, puis le **résultat** (pas les propositions) en deux lignes, « Résultat
+vulgarisé » et « Résultat en analogie », 10 mots chacune, 20 au maximum, puis les propositions.
+
 Finir chaque réponse par **1 à 10 propositions** concrètes de suite, numérotées, chacune en une ligne
 avec l'effort estimé et une question oui / non. Rien n'est appliqué sans l'accord du propriétaire.
 Une proposition refusée n'est plus reproposée : elle est notée en une ligne dans `docs/ETAT.md`.
