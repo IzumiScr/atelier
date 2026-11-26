@@ -4,7 +4,7 @@ Mis à jour et vérifié le 26/11/2026. Règles d'entretien : `CLAUDE.md`, parti
 
 ## Où on en est
 
-- **Étape 0 (préparation) en cours** : 0.1 et 0.2 réglées, 0.3 en discussion.
+- **Étape 0 (préparation) en cours** : 0.1, 0.2 et le système de mémoire réglés, 0.3 en discussion.
 - **Le portail actuel** (page noire, code d'accès vérifié dans le navigateur, cartes de projets dans
   `projets.js`) est en ligne sur GitHub Pages, publié depuis `main`.
 - **Rien n'est encore sur le domaine** : il n'est pas acheté, aucune appli n'y est publiée.
@@ -27,6 +27,8 @@ Mis à jour et vérifié le 26/11/2026. Règles d'entretien : `CLAUDE.md`, parti
     `adresse` (vide en temps normal, en `https://` pour une appli hébergée ailleurs).
 - **Frontière public / privé (0.2)** : règles dans `CLAUDE.md` ; un dépôt privé séparé tient la
   correspondance « appli A = … ».
+- **Mémoire** : fichiers dans le dépôt et outils de Claude Code (règles dans `CLAUDE.md`), avec une
+  recherche hybride et une veille mensuelle des outils d'Anthropic (voir la carte ci-dessous).
 - **Plan** : étape 0 (0.3 niveaux d'accès, 0.4 réglages au même endroit, 0.5 procédures de secours,
   0.6 contrôles automatiques), puis étape 1 (portail public, Sonnet), puis étape 2 (liste privée et
   vérification du code, Opus effort élevé, avec relecture de sécurité).
@@ -34,13 +36,13 @@ Mis à jour et vérifié le 26/11/2026. Règles d'entretien : `CLAUDE.md`, parti
 
 ## Prochaine action
 
-Choisir sur quel outil ou quelle méthode existante s'appuyer pour la mémoire (comparaison en cours),
-puis terminer la 0.3 (niveaux d'accès), puis 0.4, 0.5 et 0.6.
+Reprendre la 0.3 (niveaux d'accès), puis 0.4, 0.5 et 0.6.
 
 ## Questions ouvertes
 
 - **0.3** : ouvrir une appli privée demande le code du portail puis un code reçu par e-mail :
   d'accord ? Le propriétaire est-il le seul utilisateur pour l'instant ?
+- **Veille automatique** : une tâche planifiée chaque mois, même sans session ouverte ?
 - **Recommandations sans réponse** : accepter que l'historique public garde d'anciens noms ;
   procédure « code perdu » ; bulle Claude reportée.
 
@@ -56,6 +58,11 @@ puis terminer la 0.3 (niveaux d'accès), puis 0.4, 0.5 et 0.6.
 - La bulle Claude prévue dans d'anciens plans n'a pas de dépôt ; deux demandes de fusion ouvertes
   dans d'autres dépôts en dépendent.
 
-## Fichiers de sujet (niveau 3)
+## Carte des fichiers de sujet (niveau 3)
 
-Aucun pour l'instant.
+- `docs/memoire/recherche.md` : comment retrouver une information dans la mémoire (carte, mots exacts,
+  moteur par le sens plus tard) et comparaison des outils de mémoire. Mots-clés : recherche, sens,
+  hybride, index, vecteurs, Basic Memory, Vectorize, claude-mem, Mem0, Graphiti.
+- `docs/memoire/veille-anthropic.md` : veille mensuelle des outils de mémoire d'Anthropic, état connu,
+  critères et marche à suivre avant installation. Mots-clés : Anthropic, veille, outil mémoire, API,
+  Auto Dream, Dreaming, mise à jour.
