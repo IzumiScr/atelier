@@ -26,9 +26,11 @@ la mise en place. Issu de la note de session du 26/11/2026, condensée au grand 
 - Après une fusion dans `main`, revenir tout de suite sur la branche de travail, puis vérifier la branche
   active avant chaque commit (sinon un changement de règle peut être commité sur `main` par erreur).
 
-- Le modèle d'une conversation ne se change que par `/model` et `/effort`, tapés par le propriétaire.
-  Seuls les sous-agents peuvent avoir un autre modèle (champs `model` et `effort`). Une commande ou une
-  compétence personnalisée peut imposer un modèle, pour un seul tour.
+- Le modèle d'une conversation ne se change que par `/model` et `/effort`, tapés par le propriétaire, une
+  commande par message (suivie de texte, elle n'est pas reconnue). Un autre modèle peut aider : un
+  sous-agent (champs `model` et `effort`), ou le conseiller (`/advisor`), qui relit toute la conversation.
+  Une commande ou une compétence personnalisée peut imposer un modèle, pour un seul tour. `/clear` repart
+  d'une conversation vide dans la même session ; `/resume` rouvre l'ancienne.
 - Coût d'une session : chaque message et chaque appel d'outil relit toute la conversation (le cache coûte
   environ un dixième d'un jeton neuf). Fin de la première session : environ 427 000 jetons de contexte
   et 35 millions de jetons relus au cumul, contre environ 45 000 au démarrage d'une session neuve. La

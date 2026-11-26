@@ -46,10 +46,14 @@ Mis à jour et vérifié le 26/11/2026. Règles d'entretien : `CLAUDE.md`, parti
   « Inviter quelqu'un » : adresse + applis choisies, l'e-mail d'invitation part tout seul (le verrou
   Cloudflare Access accepte une adresse mais n'envoie pas d'invitation lui-même).
 - **Agents permanents** : aucun pour l'instant ; ils viendront plus tard, au moment du codage.
+- **Modèles (26/11/2026)** : échelle Haiku → Sonnet → Opus (règle dans `CLAUDE.md`) ; conseiller Sonnet
+  testé, il marche ; fichier de réglages du dépôt à créer (voir « Prochaine action »).
 
 ## Prochaine action
 
-La 0.5 (procédures de secours), dans une nouvelle session en Sonnet, puis la 0.6.
+Dans une nouvelle session (dépôt Atelier seul ; `/model haiku`, `/effort xhigh`, `/advisor sonnet`) :
+créer `.claude/settings.json` et le fusionner dans `main` (accord donné le 26/11/2026), puis le grand
+ménage, puis la 0.5 et la 0.6. Détail : `docs/memoire/sessions/2026-11-26-echelle-et-conseiller.md`.
 
 ## Questions ouvertes
 
