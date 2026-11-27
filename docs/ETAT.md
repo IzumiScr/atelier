@@ -7,7 +7,8 @@ Mis à jour et vérifié le 27/11/2026. Règles d'entretien : `CLAUDE.md`, parti
 - **Étape 0 (préparation) en cours** : 0.1 à 0.4 et le système de mémoire réglés. Dépôt privé
   `atelier-prive` créé (vide, privé) le 26/11/2026.
 - **Le portail actuel** (page noire, code d'accès vérifié dans le navigateur, cartes de projets dans
-  `projets.js`) est en ligne sur GitHub Pages, publié depuis `main`.
+  `projets.js`) est en ligne sur GitHub Pages, publié depuis `main`. Il y reste jusqu'à son
+  déménagement chez Cloudflare (voir « Hébergement »).
 - **Fenêtres flottantes (27/11/2026, en ligne)** : `fenetres.js` (lanceur « Applications », barre des fenêtres,
   plein écran sur téléphone, bouton retour = réduire). Une appli avec `site` en `https://` et
   `ouverture: "fenetre"` s'y ouvre ; Claude / Copilot et la sauvegarde de l'espace viendront ensuite.
@@ -15,6 +16,9 @@ Mis à jour et vérifié le 27/11/2026. Règles d'entretien : `CLAUDE.md`, parti
 
 ## Décisions en vigueur
 
+- **Hébergement (27/11/2026)** : Cloudflare pour le portail et pour toute appli qui a besoin d'un
+  site. Le propriétaire a un compte avec l'offre Workers payante. GitHub Pages n'est plus la cible :
+  le portail déménage à l'étape 1 ; le changement des réglages GitHub attend son « validé ».
 - **Domaine** : `aportatelier.fr` (un seul P), `aportatelier.com` en secours. Tant qu'il n'est pas
   acheté : adresse provisoire, modifiable en un seul endroit.
 - **Adresses** : le portail à la racine, chaque appli sur `<id>.aportatelier.fr`.
@@ -72,7 +76,6 @@ ménage, puis la 0.5 et la 0.6. Détail : `docs/memoire/sessions/2026-11-26-eche
 
 ## À faire par le propriétaire
 
-- Créer un compte Cloudflare gratuit (utile pour l'étape 2).
 - Acheter le domaine, le moment venu.
 - Recréer la tâche planifiée avec ce dépôt attaché. Accepté, à faire plus tard : Claude lira d'abord la
   documentation officielle pour donner les étapes exactes.
