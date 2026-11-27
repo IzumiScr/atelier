@@ -8,7 +8,8 @@ Mis à jour et vérifié le 27/11/2026. Règles d'entretien : `CLAUDE.md`, parti
   `atelier-prive` créé (vide, privé) le 26/11/2026.
 - **Le portail actuel** (page noire, code d'accès vérifié dans le navigateur, cartes de projets dans
   `projets.js`) est en ligne sur GitHub Pages, publié depuis `main`. Il y reste jusqu'à son
-  déménagement chez Cloudflare (voir « Hébergement »).
+  déménagement chez Cloudflare : préparé le 27/11/2026 sur la branche `claude/portail-cloudflare`
+  (voir `docs/memoire/hebergement-cloudflare.md`), pas encore connecté.
 - **Fenêtres flottantes (27/11/2026, en ligne)** : `fenetres.js` (lanceur « Applications », barre des fenêtres,
   plein écran sur téléphone, bouton retour = réduire). Une appli avec `site` en `https://` et
   `ouverture: "fenetre"` s'y ouvre ; Claude / Copilot et la sauvegarde de l'espace viendront ensuite.
@@ -18,7 +19,8 @@ Mis à jour et vérifié le 27/11/2026. Règles d'entretien : `CLAUDE.md`, parti
 
 - **Hébergement (27/11/2026)** : Cloudflare pour le portail et pour toute appli qui a besoin d'un
   site. Le propriétaire a un compte avec l'offre Workers payante. GitHub Pages n'est plus la cible :
-  le portail déménage à l'étape 1 ; le changement des réglages GitHub attend son « validé ».
+  le portail déménage (préparé, reste à fusionner et connecter) ; le changement des réglages GitHub
+  attend son « validé ».
 - **Domaine** : `aportatelier.fr` (un seul P), `aportatelier.com` en secours. Tant qu'il n'est pas
   acheté : adresse provisoire, modifiable en un seul endroit.
 - **Adresses** : le portail à la racine, chaque appli sur `<id>.aportatelier.fr`.
@@ -90,6 +92,8 @@ ménage, puis la 0.5 et la 0.6. Détail : `docs/memoire/sessions/2026-11-26-eche
 
 ## Carte des fichiers de sujet (niveau 3)
 
+- `docs/memoire/hebergement-cloudflare.md` : déménagement du portail vers Cloudflare, construction de
+  `public/`, étapes à suivre sur téléphone. Mots-clés : Cloudflare, Workers, hébergement, GitHub Pages.
 - `docs/memoire/recherche.md` : comment retrouver une information dans la mémoire (carte, mots exacts,
   moteur par le sens plus tard) et comparaison des outils de mémoire. Mots-clés : recherche, sens,
   hybride, index, vecteurs, Basic Memory, Vectorize, claude-mem, Mem0, Graphiti.
