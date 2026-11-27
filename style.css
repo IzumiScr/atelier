@@ -73,12 +73,15 @@ body {
 .zone-fenetres { position: relative; flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; }
 .vide { color: #3a3a40; text-align: center; margin: 0; user-select: none; }
 .vide span { font-size: 13px; }
-.dock { display: flex; justify-content: center; padding: 8px 16px calc(10px + var(--bas)); }
+.dock { display: flex; align-items: center; gap: 8px; padding: 8px 16px calc(10px + var(--bas)); border-top: 1px solid #111; }
 .lanceur {
   display: flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 18px;
   border: 1px solid var(--bord); border-radius: 999px; background: var(--surface); color: var(--texte); font: inherit; font-size: 15px;
 }
-.lanceur:disabled { color: var(--doux); }
+.lanceur { flex: none; cursor: pointer; }
+.lanceur[aria-expanded="true"] { border-color: var(--accent); }
+body.a-fenetres .lanceur-texte { display: none; }
+body.a-fenetres .lanceur { padding: 0 13px; }
 .noscript { text-align: center; padding: 40px 16px; color: var(--doux); }
 
 /* Page d'accueil des projets */
@@ -106,3 +109,108 @@ body {
 .btn-principal { background: var(--texte); color: #000; }
 .btn-second { border: 1px solid var(--bord); color: var(--texte); }
 .btn-second:hover, .btn-second:active { background: #17171b; }
+
+/* ---------- Étape 2 : fenêtres flottantes ---------- */
+.plan { position: relative; flex: 1; min-height: 0; }
+.plan > .zone-fenetres { position: absolute; inset: 0; }
+.calque { position: absolute; inset: 0; pointer-events: none; overflow: hidden; z-index: 5; }
+
+.fenetre {
+  position: absolute; pointer-events: auto; display: flex; flex-direction: column;
+  background: #0b0b0d; border: 1px solid var(--bord); border-radius: 12px;
+  box-shadow: 0 18px 50px rgba(0,0,0,.7), 0 0 0 1px rgba(255,255,255,.02);
+  overflow: hidden; min-width: 0;
+}
+.fenetre.active { border-color: #3a4660; }
+.fenetre.agrandie { left: 0 !important; top: 0 !important; width: 100% !important; height: 100% !important; border-radius: 0; }
+.fenetre-tete {
+  flex: none; display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  height: 44px; padding: 0 4px 0 14px; background: #131317; border-bottom: 1px solid var(--bord);
+  cursor: grab; user-select: none; -webkit-user-select: none; touch-action: none; outline: none;
+}
+.fenetre-tete:focus-visible { box-shadow: inset 0 0 0 2px var(--accent); }
+.fenetre.active .fenetre-tete { background: #181a21; }
+body.glisse, body.glisse .fenetre-tete { cursor: grabbing; }
+body.glisse { user-select: none; -webkit-user-select: none; }
+body.glisse iframe { pointer-events: none; } /* sinon la page dans la fenêtre « avale » le glisser */
+.fenetre-titre { font-size: 14px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--doux); }
+.fenetre.active .fenetre-titre { color: var(--texte); }
+.fenetre-boutons { display: flex; flex: none; }
+.fb {
+  width: 40px; height: 40px; border: 0; border-radius: 8px; background: transparent;
+  color: var(--doux); font: inherit; font-size: 18px; line-height: 1; cursor: pointer;
+}
+.fb:hover, .fb:focus-visible { background: #24242a; color: var(--texte); outline: none; }
+.fb-fermer:hover, .fb-fermer:focus-visible { background: #5a1f24; color: #fff; }
+.fenetre-corps { position: relative; flex: 1; min-height: 0; display: flex; flex-direction: column; background: #000; }
+.fenetre-corps iframe { flex: 1; width: 100%; border: 0; background: #fff; }
+.fenetre-aide { flex: none; margin: 0; padding: 6px 12px; font-size: 12px; color: var(--doux); background: #0b0b0d; border-top: 1px solid var(--bord); }
+.fenetre-aide a { color: var(--accent); }
+
+/* Poignées de redimensionnement (plus larges au doigt) */
+.poignee { position: absolute; z-index: 2; touch-action: none; }
+.p-e { top: 44px; right: -4px; bottom: 16px; width: 10px; cursor: ew-resize; }
+.p-w { top: 44px; left: -4px; bottom: 16px; width: 10px; cursor: ew-resize; }
+.p-s { left: 16px; right: 16px; bottom: -4px; height: 10px; cursor: ns-resize; }
+.p-se { right: 0; bottom: 0; width: 22px; height: 22px; cursor: nwse-resize;
+  background: linear-gradient(135deg, transparent 55%, #3a3a42 55%, #3a3a42 62%, transparent 62%, transparent 72%, #3a3a42 72%, #3a3a42 79%, transparent 79%); }
+.p-sw { left: 0; bottom: 0; width: 16px; height: 16px; cursor: nesw-resize; }
+@media (pointer: coarse) {
+  .p-e, .p-w { width: 22px; } .p-e { right: -10px; } .p-w { left: -10px; }
+  .p-s { height: 22px; bottom: -10px; }
+  .p-se { width: 34px; height: 34px; }
+  .p-sw { width: 28px; height: 28px; }
+}
+.fenetre.agrandie .poignee { display: none; }
+
+/* Applis internes */
+.app-notes {
+  flex: 1; width: 100%; resize: none; border: 0; outline: none; padding: 16px;
+  background: #000; color: var(--texte); font: inherit; font-size: 16px; line-height: 1.5;
+}
+.app-guide { flex: 1; overflow: auto; padding: 4px 18px 18px; font-size: 15px; color: var(--texte); }
+.app-guide h3 { font-size: 15px; margin: 16px 0 6px; color: var(--accent); }
+.app-guide ul { margin: 0; padding-left: 20px; }
+.app-guide li { margin: 4px 0; }
+
+/* Barre des fenêtres ouvertes */
+.taches { flex: 1; min-width: 0; display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; }
+.taches::-webkit-scrollbar { display: none; }
+.puce {
+  flex: none; max-width: 180px; min-height: 44px; padding: 0 14px; border-radius: 999px;
+  border: 1px solid var(--bord); background: transparent; color: var(--doux);
+  font: inherit; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: pointer;
+}
+.puce.active { background: var(--surface); color: var(--texte); border-color: #3a4660; }
+.puce.reduite { opacity: .6; border-style: dashed; }
+
+/* Lanceur */
+.panneau {
+  position: absolute; inset: 0; z-index: 100000; display: flex; align-items: flex-end; justify-content: flex-start;
+  padding: 12px 16px; background: rgba(0,0,0,.55);
+}
+.panneau-carte {
+  width: 100%; max-width: 420px; max-height: 100%; overflow: auto; padding: 16px;
+  background: #0e0e11; border: 1px solid var(--bord); border-radius: 18px; box-shadow: 0 20px 60px rgba(0,0,0,.8);
+}
+.panneau-carte h2 { margin: 0 0 12px; font-size: 15px; font-weight: 600; color: var(--doux); }
+.grille-apps { display: grid; grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); gap: 8px; }
+.tuile {
+  display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 14px 6px;
+  border: 1px solid transparent; border-radius: 14px; background: #15151a; color: var(--texte); font: inherit; cursor: pointer;
+}
+.tuile:hover, .tuile:focus-visible { border-color: var(--accent); outline: none; }
+.tuile-icone { font-size: 28px; line-height: 1; }
+.tuile-nom { font-size: 13px; text-align: center; }
+.tuile-sous { font-size: 11px; color: var(--doux); }
+
+/* Téléphone (écran étroit) : une fenêtre à la fois, en plein écran */
+@media (max-width: 720px) {
+  .fenetre { left: 0 !important; top: 0 !important; width: 100% !important; height: 100% !important; border-radius: 0; border: 0; box-shadow: none; }
+  .fenetre:not(.active) { display: none; }
+  .plan:not(.fenetre-ouverte) .fenetre { display: none; }
+  .fenetre-tete { cursor: default; }
+  .poignee, .fb-agrandir { display: none; }
+  .panneau { justify-content: center; }
+  .panneau-carte { max-width: none; }
+}

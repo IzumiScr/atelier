@@ -27,7 +27,7 @@
     </form>
   </main>
 
-  <!-- Espace de travail : page d'accueil des projets (le gestionnaire de fenêtres arrive à l'étape 2) -->
+  <!-- Espace de travail : cartes des projets en fond, fenêtres flottantes par-dessus -->
   <div id="bureau" class="bureau" hidden>
     <header class="barre">
       <span class="marque"><span class="logo petit" aria-hidden="true"></span><span data-nom>Atelier</span></span>
@@ -38,18 +38,30 @@
         </button>
       </span>
     </header>
-    <section id="zone-fenetres" class="zone-fenetres" aria-label="Mes projets">
-      <div class="accueil">
-        <h1 class="titre-accueil">Mes projets</h1>
-        <p class="sous-titre-accueil">Tous les projets en cours, en un seul endroit.</p>
-        <ul id="liste-projets" class="projets"></ul>
+    <div id="plan" class="plan">
+      <section id="zone-fenetres" class="zone-fenetres" aria-label="Mes projets">
+        <div class="accueil">
+          <h1 class="titre-accueil">Mes projets</h1>
+          <p class="sous-titre-accueil">Tous les projets en cours, en un seul endroit.</p>
+          <ul id="liste-projets" class="projets"></ul>
+        </div>
+      </section>
+      <!-- Calque des fenêtres flottantes (fenetres.js) -->
+      <div id="calque" class="calque"></div>
+      <!-- Lanceur d'applications -->
+      <div id="panneau-lanceur" class="panneau" hidden>
+        <div class="panneau-carte" role="dialog" aria-label="Applications">
+          <h2>Applications</h2>
+          <div id="grille-apps" class="grille-apps"></div>
+        </div>
       </div>
-    </section>
-    <nav class="dock" aria-label="Lanceur">
-      <button class="lanceur" disabled title="Bientôt">
+    </div>
+    <nav class="dock" aria-label="Lanceur et fenêtres ouvertes">
+      <button id="btn-lanceur" class="lanceur" type="button" aria-expanded="false" aria-controls="panneau-lanceur" title="Applications">
         <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg>
-        <span>Applications</span>
+        <span class="lanceur-texte">Applications</span>
       </button>
+      <div id="taches" class="taches" aria-label="Fenêtres ouvertes"></div>
     </nav>
   </div>
 
@@ -57,5 +69,6 @@
   <script src="config.js"></script>
   <script src="projets.js"></script>
   <script src="app.js"></script>
+  <script src="fenetres.js"></script>
 </body>
 </html>
