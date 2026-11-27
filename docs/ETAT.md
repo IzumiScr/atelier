@@ -60,6 +60,10 @@ ménage, puis la 0.5 et la 0.6. Détail : `docs/memoire/sessions/2026-11-26-eche
 - **Recommandations sans réponse** : accepter que l'historique public garde d'anciens noms ;
   procédure « code perdu » ; bulle Claude reportée.
 
+## Propositions refusées
+
+- 27/11/2026 : une liste de 10 idées liées aux projets en cours (il veut des idées nouvelles, sans lien).
+
 ## À faire par le propriétaire
 
 - Créer un compte Cloudflare gratuit (utile pour l'étape 2).
