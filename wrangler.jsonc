@@ -1,0 +1,7 @@
+{
+  // Portail Atelier : site statique servi par Cloudflare (Workers + fichiers statiques).
+  // Les fichiers publiés sont préparés dans public/ par tools/build-site.sh.
+  "name": "atelier",
+  "compatibility_date": "2026-11-27",
+  "assets": { "directory": "./public" }
+}
