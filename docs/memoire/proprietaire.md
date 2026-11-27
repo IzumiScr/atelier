@@ -8,6 +8,8 @@ la mise en place. Issu de la note de session du 26/11/2026, condensée au grand 
 - Il écrit souvent par dictée vocale : les mots peuvent être déformés (nom de domaine, par exemple).
   Confirmer l'orthographe lettre par lettre avant d'agir.
 - Il répond par numéros ou par « oui / non » aux propositions.
+- Il préfère avancer étape par étape, une demande à la fois (27/11/2026) : une longue demande rend les
+  changements difficiles et crée des contradictions.
 - Quand les validations à chaque modification l'ont fatigué (26/11/2026), il a demandé de n'en garder
   que pour les grandes étapes et les autorisations : règle dans `CLAUDE.md`. Un « oui » par numéro
   autorise exactement ce que la proposition décrit, fusion comprise si elle la nomme.
