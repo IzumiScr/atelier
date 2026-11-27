@@ -8,10 +8,10 @@ window.ATELIER_PROJETS = [
   {
     nom: "Appartement d'Achères",
     description: "Aménagement en 3D du 2 pièces, avec l'historique avant / après de chaque modification.",
-    site: "",
+    site: "https://appartement-acheres.pages.dev/",
     depot: "https://github.com/IzumiScr/appartement-acheres",
-    etat: "en-cours",
-    note: "Mise en ligne en préparation"
+    etat: "en-ligne",
+    note: "En ligne sur Cloudflare"
   },
   {
     nom: "Atlas OSINT",
