@@ -1,6 +1,6 @@
 # État du projet Atelier
 
-Mis à jour et vérifié le 26/11/2026. Règles d'entretien : `CLAUDE.md`, partie « Mémoire du projet ».
+Mis à jour et vérifié le 27/11/2026. Règles d'entretien : `CLAUDE.md`, partie « Mémoire du projet ».
 
 ## Où on en est
 
@@ -8,6 +8,9 @@ Mis à jour et vérifié le 26/11/2026. Règles d'entretien : `CLAUDE.md`, parti
   `atelier-prive` créé (vide, privé) le 26/11/2026.
 - **Le portail actuel** (page noire, code d'accès vérifié dans le navigateur, cartes de projets dans
   `projets.js`) est en ligne sur GitHub Pages, publié depuis `main`.
+- **Fenêtres flottantes (27/11/2026, en ligne)** : `fenetres.js` (lanceur « Applications », barre des fenêtres,
+  plein écran sur téléphone, bouton retour = réduire). Une appli avec `site` en `https://` et
+  `ouverture: "fenetre"` s'y ouvre ; Claude / Copilot et la sauvegarde de l'espace viendront ensuite.
 - **Rien n'est encore sur le domaine** : il n'est pas acheté, aucune appli n'y est publiée.
 
 ## Décisions en vigueur
