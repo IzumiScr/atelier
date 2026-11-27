@@ -7,45 +7,17 @@ Claude Code : tout doit pouvoir se faire des deux façons, sans démarche réser
 **Avant tout travail, lire `docs/ETAT.md`** : la mémoire à jour du projet (où on en est, décisions en
 vigueur, prochaine action, questions ouvertes).
 
-## Choix du modèle et de l'effort (automatique)
+## Routage du modèle : désactivé (27/11/2026)
 
-À chaque demande, estimer le modèle et l'effort nécessaires :
+Sur demande du propriétaire, **plus de choix automatique du modèle ni de l'effort**, plus de ligne « 🧠 »,
+plus d'échelle Haiku → Sonnet → Opus, plus de sous-agents choisis pour cela : répondre directement.
+Pour le remettre : reprendre cette section dans l'historique git (commit `3d5422b`).
 
-- **Haiku, effort faible** : question courte, recherche simple dans les fichiers, reformulation.
-- **Sonnet, effort moyen** : travail courant (fichiers, portail public, documents, tests).
-- **Sonnet, effort élevé** : travail long ou sur plusieurs fichiers liés, recherche d'une panne.
-- **Opus, effort élevé** : sécurité, accès, données privées, architecture, décision difficile à défaire.
-- **Opus, effort très élevé** : seulement si le niveau précédent n'a pas suffi, en le signalant.
-- **Effort maximum** : jamais sans l'accord du propriétaire.
-
-Chaque message relit toute la conversation : démarrer bas et monter d'un cran seulement quand il le faut.
-Le propriétaire travaille en Haiku, effort très élevé (`xhigh`).
-
-- **Conversation en Haiku : l'échelle Haiku → Sonnet → Opus**, l'effort choisi avec la liste ci-dessus :
-  1. Haiku répond seul aux petites demandes (question courte, recherche simple, reformulation).
-  2. Au-delà, ou en cas de doute, Sonnet refait la réflexion. Pour un simple avis : le conseiller
-     (`/advisor sonnet`), s'il est actif, en écrivant d'abord la question ; son effort ne se choisit pas.
-     Pour la tâche entière : un sous-agent Sonnet, avec un résumé complet de la demande et l'effort
-     estimé par Haiku.
-  3. Sonnet finit par un verdict : « suffisant », ou « Opus nécessaire, effort …, parce que … ». Si
-     Opus est nécessaire, ou pour sécurité, accès, données privées, architecture : un sous-agent Opus,
-     à l'effort dit par Sonnet (élevé par défaut ; très élevé seulement s'il l'estime nécessaire, en le
-     signalant ; maximum jamais sans l'accord du propriétaire).
-  La ligne « 🧠 » dit quel échelon a répondu, et avec quel effort.
-- **Conversation en Sonnet, tâche difficile** : la confier à un sous-agent Opus, avec l'effort estimé.
-- **Conversation en Opus, long travail simple** (beaucoup de fichiers ou de recherches) : le confier à
-  un sous-agent Sonnet ou Haiku.
-- **Petite demande** : répondre directement, quel que soit le modèle (un sous-agent repart de zéro et
-  coûte plus cher).
 - **Conversation longue** (le seuil du compactage automatique, réglage « auto » affiché par `/autocompact` :
   1 million de jetons pour Sonnet 5.5, à revérifier si le modèle change) ou **fin d'étape** : suivre « Fin de session ».
 
-Commencer chaque réponse par une ligne « 🧠 » : le niveau **conseillé** (modèle, effort, raison) et le
-modèle **réellement utilisé**, d'après les avis de la session, sans deviner. Ne jamais dire avoir changé
-le modèle de la conversation : seul le propriétaire peut le faire (`/model`, `/effort`).
-
 Ordre de chaque réponse : le moins utile en haut, l'essentiel en bas, collé aux propositions :
-ligne « 🧠 », détails, puis le **résultat** (pas les propositions) en « Résultat en analogie »
+détails, puis le **résultat** (pas les propositions) en « Résultat en analogie »
 puis « Résultat vulgarisé ». Pour chacun : « Court » sur sa ligne, la réponse courte (10 à 20 mots) en
 dessous, une ligne vide, puis « Long » sur sa ligne, la réponse détaillée (30 à 50 mots maximum) en
 dessous, mots simples, sans terme technique. Puis les propositions.
@@ -86,8 +58,7 @@ seule proposition à la fin suffit.
   Pas de pull request sauf demande. **Exception : la mémoire** (`docs/ETAT.md`, `docs/memoire/`) se
   tient à jour sans « validé », directement sur `main`, après avoir vérifié qu'elle ne contient aucune
   information privée.
-- Avant chaque étape : un mini-rapport de quelques lignes (ce qui va être fait, modèle, effort,
-  temps estimé).
+- Avant chaque étape : un mini-rapport de quelques lignes (ce qui va être fait, temps estimé).
 - Le portail doit fonctionner dans tous les navigateurs (Chrome, Edge, Firefox, Safari, Samsung
   Internet), sur téléphone, tablette et ordinateur, au toucher, à la souris et au clavier.
 - Environ toutes les 10 demandes : rappeler que la liste privée permet d'ajouter vite un projet ou
