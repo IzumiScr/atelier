@@ -18,6 +18,9 @@ Mis à jour et vérifié le 27/11/2026. Règles d'entretien : `CLAUDE.md`, parti
 - **Domaine** : `aportatelier.fr` (un seul P), `aportatelier.com` en secours. Tant qu'il n'est pas
   acheté : adresse provisoire, modifiable en un seul endroit.
 - **Adresses** : le portail à la racine, chaque appli sur `<id>.aportatelier.fr`.
+- **Demande de domaine (27/11/2026)** : à toute demande de création, d'achat ou d'adresse de domaine,
+  proposer d'abord `aportatelier.fr` (un seul P ; dictée parfois déformée), `.com` en secours.
+  L'achat attend le « validé » du propriétaire.
 - **Deux listes** : une publique et neutre (GitHub), une privée (Cloudflare) affichée seulement après
   un code vérifié côté serveur. À ce moment-là (étape 2), le code d'accès est changé et l'empreinte
   retirée de `config.js`.
