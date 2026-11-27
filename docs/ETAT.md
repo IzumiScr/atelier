@@ -76,6 +76,8 @@ ménage, puis la 0.5 et la 0.6. Détail : `docs/memoire/sessions/2026-11-26-eche
 - `projets.js` contient encore des noms et des liens à retirer de la liste publique (étape 1).
 - La bulle Claude prévue dans d'anciens plans n'a pas de dépôt ; deux demandes de fusion ouvertes
   dans d'autres dépôts en dépendent.
+- Appli C (essai, hors portail public, ajout possible plus tard) : estimation coût / temps à
+  l'étape 2. Détail dans `atelier-prive`.
 
 ## Carte des fichiers de sujet (niveau 3)
 
