@@ -38,6 +38,16 @@ window.ATELIER_PROJETS = [
     note: "Dépôt créé · album à construire"
   },
   {
+    id: "precepteur",
+    nom: "Précepteur",
+    icone: "🎓",
+    description: "Tuteur pour plusieurs élèves : classes, une page par élève, séances à voix haute.",
+    site: "https://precepteur.aportatelier.workers.dev/",
+    depot: "",
+    etat: "en-ligne",
+    note: "En ligne sur Cloudflare"
+  },
+  {
     nom: "Atelier",
     description: "Ce portail : la porte d'entrée vers tous les projets.",
     site: "",
