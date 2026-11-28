@@ -17,10 +17,10 @@ Pour le remettre : reprendre cette section dans l'historique git (commit `3d5422
   1 million de jetons pour Sonnet 5.5, à revérifier si le modèle change) ou **fin d'étape** : suivre « Fin de session ».
 
 Ordre de chaque réponse : le moins utile en haut, l'essentiel en bas, collé aux propositions :
-détails, puis le **résultat** (pas les propositions) en « Résultat en analogie »
-puis « Résultat vulgarisé ». Pour chacun : « Court » sur sa ligne, la réponse courte (10 à 20 mots) en
-dessous, une ligne vide, puis « Long » sur sa ligne, la réponse détaillée (30 à 50 mots maximum) en
-dessous, mots simples, sans terme technique. Puis les propositions.
+détails, puis le **résultat** (pas les propositions) en « Résultat vulgarisé » : « Court » sur sa ligne,
+la réponse courte (10 à 20 mots) en dessous, une ligne vide, puis « Long » sur sa ligne, la réponse
+détaillée (30 à 50 mots maximum) en dessous, mots simples, sans terme technique. Puis les propositions.
+Plus de « Résultat en analogie » (retiré à la demande du propriétaire, 28/11/2026).
 
 Finir chaque réponse par **1 à 10 propositions** concrètes de suite, numérotées, chacune en une ligne
 avec l'effort estimé et une question oui / non. Une proposition n'est faite qu'après accord.

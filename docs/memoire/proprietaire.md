@@ -13,8 +13,8 @@ la mise en place. Issu de la note de session du 26/11/2026, condensée au grand 
 - Sept propositions de suite l'ont fatigué (27/11/2026) : en donner 2 au plus, les plus utiles, dans l'ordre.
 - Il veut plus d'autonomie (27/11/2026) : petites choses faites sans demander ; validation seulement pour
   une grande étape, un paiement, une clé ou un accès, une suppression définitive, un changement de règle.
-  Il a suspendu la ligne « modèle et effort conseillés » et le « résultat en analogie » ; il garde le
-  « résultat vulgarisé » court et long.
+  Il a suspendu la ligne « modèle et effort conseillés » ; le « résultat en analogie » est retiré pour de
+  bon (28/11/2026, règle dans `CLAUDE.md`) ; il garde le « résultat vulgarisé » court et long.
 - Quand les validations à chaque modification l'ont fatigué (26/11/2026), il a demandé de n'en garder
   que pour les grandes étapes et les autorisations : règle dans `CLAUDE.md`. Un « oui » par numéro
   autorise exactement ce que la proposition décrit, fusion comprise si elle la nomme.
